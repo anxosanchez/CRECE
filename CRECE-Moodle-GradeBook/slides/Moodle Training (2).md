@@ -1,145 +1,68 @@
-﻿
+﻿---
+theme: gaia
+size 16:9
+paginate: true
+header: CBHE-CRECE
+footer: University of Vigo
+_class: invert
+color: #FFF
+marp: true
+backgroundColor: #000
+---
 
-MOODLE TRAINING
+# MOODLE Advanced Training <!-- Fit -->
 
-— ADVANCED TOPICS —
+---
 
-Office of Information Technology
-
-
-
-
-
-OVERVIEW OF TOPICS TO BE
-
-COVERED
-
-• Gradebook Aggregation
-
-• Course Beautification
-
-• Lessons
-
-
-
-
-
-– TOPIC 1 –
-
-GRADE AGGREGATION TOPICS
+# GRADE Aggregation topics
 
 Weighted Mean, Simple Weighted Mean, and Natural
 
+---
 
+# Gradebook setup (i)
 
-
-
-GRADEBOOK SETUP
-
-• Gradebook can be edited to suit your
-
-specific needs.
-
-– Grades can be grouped into categories for
-
-ease of use.
-
+- Gradebook can be edited to suit your specific needs.
+- Grades can be grouped into categories for ease of use.
 – Grades can also be weighted.
+- All grade settings are changed in Gradebook.
 
-• All grade settings are changed in
-
-Gradebook.
-
+---
 
 
 
+# Gradebook setup (ii)
 
-GRADEBOOK SETUP
+- Once Gradebook is opened, selecting the “Setup” tab will allow instructors to manually add grade items, create and manage grade categories, manage category/item weights, and much more.
 
-• Once Gradebook is opened, selecting the “Setup” tab will allow
+---
 
-instructors to manually add grade items, create and manage
+# Changing hanging the Gradebook
 
-grade categories, manage category/item weights, and much
+## Aggregation method
 
-more.
+- For grade calculations, myCourses uses one of three aggregation methods.
+- To change the aggregation method for your course’s gradebook, select the “Edit” drop-down shown on the same line as your course’s name.
+- Then click “Edit settings.”
+- Now you’re able to manage how the grades are calculated for the entire course.
 
+---
 
+#Aggregation options
+- Select which grading method you would like to use.
+- Also note that there is an option to drop the lowest grade(s).
 
+---
 
+# Weighted mean of grades
 
-CHANGING THE GRADEBOOK
+- This method of aggregation is best used with grade categories.
+- With it, you can assign each category to be worth a certain percentage of the overall course’s grade.
+- For example:
+  - In my EQI2 2021 course, the project that students do is worth 30% of their grade.
+  - Exams make up the remaining 80%.
 
-AGGREGATION METHOD
-
-• For grade calculations, myCourses uses one of three
-
-aggregation methods.
-
-• To change the aggregation method for your course’s gradebook,
-
-select the “Edit” drop-down shown on the same line as your
-
-course’s name.
-
-Then click “Edit settings.”
-
-
-
-
-
-CHANGING THE GRADEBOOK
-
-AGGREGATION METHOD
-
-• Now you’re able to manage
-
-how the grades are calculated
-
-for the entire course.
-
-• The “Aggregation” option allows
-
-you to select which grading
-
-method you would like to use.
-
-• Also note that there is an option
-
-to drop the lowest grade(s).
-
-
-
-
-
-WEIGHTED MEAN OF GRADES
-
-• This method of aggregation is best
-
-used with grade categories.
-
-• With it, you can assign each
-
-category to be worth a certain
-
-percentage of the overall course’s
-
-grade.
-
-• For example:
-
-– In my PHYS 2001 course, the
-
-homework that students do is worth
-
-20% of their grade.
-
-– Exams make up the remaining 80%.
-
-
-
-
-
+---
 WEIGHTED MEAN OF GRADES
 
 • As an example, let’s consider the following grade set:
