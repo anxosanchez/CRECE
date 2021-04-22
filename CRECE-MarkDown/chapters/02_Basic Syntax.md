@@ -659,23 +659,3 @@ For security reasons, not all Markdown applications support HTML in Markdown doc
 Use blank lines to separate block-level HTML elements like `<div>`, `<table>`, `<pre>`, and `<p>` from the surrounding content. Try not to indent the tags with tabs or spaces — that can interfere with the formatting.
 
 You can’t use Markdown syntax inside block-level HTML tags. For example, `<p>italic and **bold**</p>` won’t work.
-
-[![Markdown Guide book cover](https://d33wubrfki0l68.cloudfront.net/cb41dd8e38b0543a305f9c56db89b46caa802263/25192/assets/images/book-cover.jpg)](https://www.markdownguide.org/book/)
-
-##### Take your Markdown skills to the next level.
-
-Learn Markdown in 60 pages. Designed for both novices and experts, *The Markdown Guide* book is a comprehensive reference that has everything you need to get started and master Markdown syntax.
-
-[Get the Book](https://www.markdownguide.org/book/)
-
-###### Want to learn more Markdown?
-
-Don't stop now! 😎 Star the [GitHub repository](https://github.com/mattcone/markdown-guide) and then enter your email address below to receive new Markdown tutorials via email. No spam!
-
-Stay updated
-
-[Overview](https://www.markdownguide.org/basic-syntax/#overview)[Headings](https://www.markdownguide.org/basic-syntax/#headings)[Paragraphs](https://www.markdownguide.org/basic-syntax/#paragraphs-1)[Line Breaks](https://www.markdownguide.org/basic-syntax/#line-breaks)[Emphasis](https://www.markdownguide.org/basic-syntax/#emphasis)[Blockquotes](https://www.markdownguide.org/basic-syntax/#blockquotes-1)[Lists](https://www.markdownguide.org/basic-syntax/#lists-1)[Code](https://www.markdownguide.org/basic-syntax/#code)[Horizontal Rules](https://www.markdownguide.org/basic-syntax/#horizontal-rules)[Links](https://www.markdownguide.org/basic-syntax/#links)[Images](https://www.markdownguide.org/basic-syntax/#images-1)[Escaping Characters](https://www.markdownguide.org/basic-syntax/#escaping-characters)[HTML](https://www.markdownguide.org/basic-syntax/#html)[HTML Best Practices](https://www.markdownguide.org/basic-syntax/#html-best-practices)
-
-[About](https://www.markdownguide.org/about/)   [Contact](https://www.markdownguide.org/contact/)   [GitHub](https://github.com/mattcone/markdown-guide)   [API](https://www.markdownguide.org/api/v1/)   [Privacy Policy](https://app.termly.io/document/privacy-policy/1ca2b712-96e3-46bf-a8f1-d0035d389e7d)
-
-© 2021. A [Matt Cone](https://www.mattcone.com/) project. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Made with 🌶️ in [New Mexico](https://www.newmexico.org/).
