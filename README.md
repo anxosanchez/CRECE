@@ -1,4 +1,4 @@
-# CBHE-CRECE Training - UVIGO
+<img src="https://www.eusa.eu/documents/eusa/News/2017/erasmuspluscall-funding.jpg" width="400"> "               " # CBHE-CRECE Training - UVIGO
 
 ## About Project CRECE
 
@@ -48,7 +48,7 @@ Cuba
 ## Budget
 
 999 393 EUR
-
-![](https://your-image-url.type) with <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png" width="150">[Licensed under Creative Commons 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+  
+<img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png" width="150">[Licensed under Creative Commons 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 according to the terms of the [Guidelines for the Use of the Grant, Section 7.1](http://hepmp.med.bg.ac.rs/wp-content/uploads/2018/02/guidelines_for_the_use_of_the_grant_2017_cbhe_v_ii_-_09_january_2018_0-702763d5-b014-4f99-81a0-928c4bb8aa7a.pdf)
