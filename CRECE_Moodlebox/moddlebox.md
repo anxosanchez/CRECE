@@ -13,14 +13,14 @@ heght: 1080
 ---
 # Wear Your Moodle Server 
 
-![image](./raspberry-pi-moodle.jpg)
+<img src="./images/raspberry-pi-moodle.jpg" alt="image" style="zoom: 67%;" />
 
 ---
 <!-- _class: invert -->
 
 # Take it to the Classsroom
 
-![width:700px](./moodlebox.png)
+<img src="./images/moodlebox.png" alt="width:700px"  />
 
 # What hardware do i need?
 
