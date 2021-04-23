@@ -48,6 +48,10 @@ Cuba
 ## Budget
 
 999 393 EUR
+img[src*="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png"] {
+   width:150px;
+   height:100px;
+}
 
 ![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png#thumbnail style="zoom: 25%)[Licensed under Creative Commons 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
