@@ -1,4 +1,6 @@
-<img src="https://www.eusa.eu/documents/eusa/News/2017/erasmuspluscall-funding.jpg" width="400"> "               " # CBHE-CRECE Training - UVIGO
+<img src="https://www.eusa.eu/documents/eusa/News/2017/erasmuspluscall-funding.jpg" width="400">
+  
+# CBHE-CRECE Training - UVIGO
 
 ## About Project CRECE
 
