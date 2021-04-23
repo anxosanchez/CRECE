@@ -1,4 +1,4 @@
-<img src="https://www.eusa.eu/documents/eusa/News/2017/erasmuspluscall-funding.jpg" width="400"><img src="https://github.com/anxouvigo/CRECE/blob/main/images/LogoCrece.png" height="150">
+<img src="https://www.eusa.eu/documents/eusa/News/2017/erasmuspluscall-funding.jpg" width="400"><img src="https://github.com/anxouvigo/CRECE/blob/main/images/LogoCrece.png" height="100">
   
 # CBHE-CRECE Training - UVIGO
 
