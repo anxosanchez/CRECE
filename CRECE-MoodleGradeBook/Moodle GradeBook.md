@@ -96,7 +96,7 @@ Gradebook contains the score for each graded activity that can be presented in v
 
 With lots of activities that use grades within a course, the Gradebook will have a lot of data on one page. Categories can be created for group activities, and the Gradebook view can be customized according to the user for them to see all or some categories on the screen.
 
-## Customizing Grades
+# Customizing Grades
 
 When you create an activity, you will choose how the activity will be scored and added into the course's grades area. Default grading are number grades (0–100) and a preset scale called **Separate and connected ways of knowing**[^1]. 
 
@@ -201,7 +201,7 @@ is show as:
 
 Outcomes can only be deleted before they are added to an assignment. Once it is used in an assignment, the delete option will not be available, but you will still be able to edit. However, if the outcome is removed from all assignments, we will be able to delete the outcome from the course. Later, we'll discuss again the outcomes.
 
-## Adding Graded Activities
+# Adding Graded Activities
 
 Adding an activity means toggle **Turn editing on** within the course. All graded activities are added through the **Add an activity or resource text** available within each section of the course (figure 6). 
 
@@ -321,7 +321,7 @@ To create an assignment including outcomes follow this steps:
 | 2.   | Add an activity or resource (click on).                      |
 | 3.   | Assignment ... Add.                                          |
 | 4.   | Say a name to the _Assignment name box_.                     |
-| 5.   | In _Description box_ provide assignement details.            |
+| 5.   | In _Description box_ provide assignment details.             |
 | 6.   | In _Submission settings_ select (Yes/No):<br/>     Require students click submit button<br/>     Require students accept submission statement<br/>     Attempts reopened automatically or not<br>    Set Maximum number of uploaded files |
 | 7.   | In _Grades_ select:<br>    Grade<br>    Type<br>    Point<br>    Maximum points |
 | 8.   | Save and return                                              |
@@ -354,12 +354,15 @@ Steps are:
 | 2.   | Add an activity or resource (click on).                      |
 | 3.   | Assignment ... Add.                                          |
 | 4.   | Say a name to the _Assignment name box_.                     |
-| 5.   | In _Description box_ provide assignement details.            |
+| 5.   | In _Description box_ provide assignment details.             |
 | 6.   | In _Submission settings_ select (Yes/No):<br/>     Require students click submit button<br/>     Require students accept submission statement<br/>     Attempts reopened automatically or not<br>    Set Maximum number of uploaded files |
 | 7.   | In _Grades_ select:<br>    Grade<br>    Type<br>    Point<br>    Maximum points<br>    Marking guide from the drop-down list |
 | 8.   | Save and return                                              |
 
-
+<center><figure>
+    <img src="./images/f8.PNG" alt="" />
+    <figcaption><small>Figure 8. Advenced grading: rubric.</small><figcaption>
+<figure>
 
 The criteria does not need to add up to the maximum grade given for the assignment because:
 
@@ -370,92 +373,28 @@ This is a normalization process as we'll see in _Using Calculations_.
 
 ### Defining a new grading from scratch
 
-After opening the grading form, we need to add in a name for the marking guide and description. Add some information to these boxes (for the following example, we can name the marking guide  _Presentation_ and the description
-**Present your ideas for a research project** ).
+After opening the grading form, we need to add in some data:
 
-1. The next section is the actual **Marking guide** setup area, which has a place to
-   add the first criterion. There are three elements for each criterion:
-   ° **Description for Students** : This is the information that a student will
-   see in order to find out the assignment criteria. This will only be shown
-   if the option for students to view the criteria is turned on.
-   ° **Description for Markers** : This information will be seen by teachers
-   when they are grading the work and will help the teacher identify
-   the grade to be awarded to the student.
-   ° **Maximum mark** : A teacher can choose the maximum grade possible
-   for this criteria. When grading, the teacher can choose any grade from
-   zero to this maximum number.
-2. Under the **Marking guide** title, click on the **Click to edit** criterion name
-   and add the text Planning.
-3. Under the **Description for Students** title, click on **Click to edit**. Add the
-   this to the box: The presentation has been planned to include an
-   initial overview plus as outline of each type of research.
-4. Within the **Description for Markers** section, click on the **Click to edit**
-   text and add: To gain top marks the overview must be very clear
-   including the research question. There needs to be at least
-   three types of research. There are five marks possible and
-   should be based on 1 point for each item (clear overview,
-   research question, three types of research).
+| Section                  | Value                                                        |
+| ------------------------ | ------------------------------------------------------------ |
+| Name                     | Laboratory Report                                            |
+| Marking guide            | - Description for Students: This will only be shown if the option for students to view the criteria is turned on.<br/>- Description for Markers: always visible<br/>- Maximum mark: A value from zero to maximum number. |
+| Frequently used comments | - Confidently presented<br>- Evidence of planning<br/>and preparation |
+| Last step                | Save marking guide and make it ready or save as draft (visible _Advanced grading_ link in the _assignment administration block_) |
 
-*Adding Graded Activities*
+An example should see like this:
 
-1. Finally, click on **Click to edit** under the **Maximum mark** title and add in
-   the number 5. We now need to add some more criteria. Click on the **Add**
-   **criterion** button and repeat the preceding process for the following criteria:
+|                           | Excellent<br>5 pts                                           | Good<br/>4 pts                                               | Fair<br>3 pts                                                | Poor<br/>2 pts                                               | Bad<br>0 pts                              |
+| ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------- |
+| Title                     | Excellent Title describes the lab, includes: student name, lab partners, class and period | Good Missing one component                                   | Fair missing two components                                  | Poor missing three components                                | No Credit No title present                |
+| Introduction              | Excellent The purpose of the lab is clearly identified and directly related to the work. Terms and/or equations are clearly defined and explained. | Good The purpose of the lab is clearly identified. Terms and/or equations are only partially defined and explained. | Fair The purpose of the lab or question to be answered during the lab is only partially identified. Terms and/or equations are only partially explained or omitted | Poor The purpose is unclear or is not related to the lab. Definitions and explanations of terms and/or equations are irrelevant or omitted. | No Credit Introduction missing            |
+| Procedure and Materials   | Excellent Procedure and Materials are referenced or written clearly, in detail, and can be duplicated by others. | Good                                                         | Fair Procedure or Materials are not listed or referenced.    | Poor                                                         | No Credit Procedure and Materials missing |
+| Data                      | Excellent Representation of the data and calculations is accurate, detailed, and easy to understand. All units and figures are correct. Graphs are labeled and complete. | Good Representation of the data in written form is accurate, but not detailed. Some units and or significant figures are missing or incorrect. Graphs are missing information. | Fair Representation of the data in written form is accurate, but somewhat difficult to understand. Units and/or significant figures are missing. | Poor Data is inaccurate.                                     | No Credit Data and Calculations missing   |
+| Analysis and calculations | Excellent One example of each calculation is given, measurements are to the correct level of accuracy, significant figures are correct | Good One example of each calculation is present, most figures are accurate and have correct sig figs. | Fair Examples of calculations present, a number of errors in accuracy, sig figs, or calculations are present | Poor Calculation examples not complete - some are missing, many errors in accuracy, sig figs or calcuations. | No Credit No analysis or calculations     |
+| Conclusion                | Excellent Shows connection between the purpose and the results achieved. results are discussed in reference to theory. error analysis is included where necessary. | Good . Restates purpose and clear connection is made between purpose and the results achieved. Theory is not clearly related to the results of experiment. Error analysis present but not complete. | Fair . Restates purpose but unclear connection between purpose and the results achieved. Explanation of theory and error analysis are missing. | Poor Restates purpose with no connection to results achieved. Explanation of theory and error analysis are missing. | No Credit Conclusion missing              |
+| Format & Neatness         | Excellent Presentation of work is neat and well-organized. Paragraph form with no use of pronouns.<BR> Illustrations, graph, or figures emphasize important facts. | Good Presentation of work is neat and well-organized. Paragraph form with no use of pronouns. | Fair Presentation of work is accurate but somewhat hard to follow. Paragraph form with limited use of pronouns. | Poor Presentation is messy and hard to read. Paragraph form with excessive use of pronouns. | No Credit Illegible                       |
 
-```
-Criterion name Description for students Description for markers Maximum
-mark
-Presentation The presentation is clearly
-and confidently presented
-The student presented
-confidently with
-evidence that he/she
-planned and practiced
-the presentation.
-The student presented
-without reading a script.
-The presentation aids
-were appropriate, clear,
-and had the information
-required for the project.
-10
-Questions The questions are answered
-at end of the presentation
-The maximum points
-should be awarded
-if students were able
-to answer questions
-confidently, displaying
-understanding of their
-project.
-Lower points will be
-awarded if students
-were required to use
-their notes to answer
-questions or if they
-were unable to answer
-questions.
-5
-```
-
-1. The next section to set up a marking guide is the **Frequently used**
-   **comments** area where we can add statements that can be used when
-   grading the assignment. Click on **Add frequently used comment**
-   and type in Confidently presented and Evidence of planning
-   and preparation.
-
-1. Finally, we have two marking guide options that can be turned on and
-   off using the tick boxes. Keep both of these turned on.
-   Your completed marking guide should look like this:
-2. Click on **Save marking guide and make it ready**.
-
-*Adding Graded Activities*
-
-```
-If we have not completed our marking guide, we can click on
-Save as draft and then come back to it via the Advanced grading
-link within the assignment administration block.
-```
+If we have not completed our marking guide, we can click on Save as draft and then .
 
 1. The next screen will indicate that the marking guide is now ready for
    use. You can still click on **Edit the Current form definition** or **Delete the**
@@ -466,278 +405,84 @@ link within the assignment administration block.
 We will look at how to grade work using the marking guide in *Chapter 4* ,
 *Assigning Grades*.
 
-#### The rubrics method
+### Defining a rubric from scratch
 
-The second method of alternative grading is called Rubrics. **Rubrics** allow a set of
-criteria to be set up for the assessment along with descriptors that outline the different
-levels at which the criteria are met. Each descriptor has a value that enables Moodle to
-calculate a final grade for the assessment based on the criteria met. Rubrics are a more
-detailed version of the marking guide, and they make the grading process simple for
-the teacher and students.
+Rubrics allow multiple criteria for the assessment by means of descriptors and points depending on the compliance with the criteria. The final grade is calculated by moodle.
 
-```
-Chapter 3
-```
+Steps are:
 
-When using the Rubric grading method, we will need to create a grading form
-in a similar way in order to create the marking guide. We will set up a rubric
-assignment together:
+| Step | Operation                                                    |
+| ---- | :----------------------------------------------------------- |
+| 1.   | Turn editing on                                              |
+| 2.   | Add an activity or resource (click on).                      |
+| 3.   | Assignment ... Add.                                          |
+| 4.   | Say a name to the _Assignment name box_.                     |
+| 5.   | In _Description box_ provide assignment details.             |
+| 6.   | In _Grades_ navigate to _Type_ and set _Point_:<br/>     Fill _Maximun Points_<br/>     Change _Grading Method_ to _Rubric_ |
+| 7.   | Save and display (appears scree on figure)                   |
+| 8.   | Choose:<br>    -  _Define_ option <br>    - _From a template_[^10] |
 
-1. Click on **Turn editing on** button.
-2. Click on **Add an activity or resource**.
-3. Click on **Assignment** and then click on **Add**.
-4. In the **Assignment name** box, type in the name of the assignment (such as
-   Assignment 5).
-5. In the **Description** box, provide the assignment details as Core criteria
-   of an assignment.
-6. Within the **Grades** section navigate to **Grade** | **Type** and set it to **Point**
-   and ensure that **Maximum points** is set to 30. Change **Grading method**
-   to **Rubric**.
-7. Scroll to the bottom of the screen and click on **Save and display**. You will see
-   an advanced grading screen like the one shown in the following screenshot:
-8. From this screen, we will choose the **Define new grading form from scratch**
-   option. However, note that you can also select **Create new grading form**
-   **from a template**. This enables you to use grading forms that you have
-   already created in this or other courses or use standard (site-wide) forms
-   created on the Moodle site.
 
-*Adding Graded Activities*
-
-```
-As with the marking guide, if no rubric form is created at this stage,
-the simple direct grading method will be used; this means that the
-teacher will manually add in the final grade rather than grade the
-assignment using the criteria.
-```
 
 1. As this is the first form we have created, click on **Define new grading form**
    **from scratch**. The following screenshot will appear:
-2. In the **Name** box, type in the name for this set of rubric criteria. For this
-   example, we will call it Core assignment criteria. You can also add
-   a description to the **Description** box (this is useful when sharing rubrics
-   or searching for your own rubrics in order to use them as templates).
+   
+   <center><figure>
+       <img src="./images/f9.PNG" alt="" />
+       <figcaption><small>Figure 9. Defining a rubric.</small><figcaption>
+   <figure>
+   
+2. Above are the _Name box_ and the description to the _Description box_ already know.
 
-We will be completing the rubric criterion and level boxes, but first let's find out how
-rubrics are used and what these options are.
+Some tips:
 
-```
-Chapter 3
-```
+- There is at least one criterion, and each criterion has specific levels of grading.
+- Criterion is an element of the assignment that needs to be met.
+- Levels are the extent to which this criterion has been met.
+- Statements are added and are used to assess the work.
+- For assignments with multiple criteria, points for each criterion are added together to create
+  the final grade.
+- The default setting within a rubric is for one criterion, with three points levels ranging from zero to two points but, any changes can be made (number of criterions and/or points for each.As an aexample, the preceeding rubric corresponde to this design on the moodle tool:
 
-Within a rubric, there is at least one criterion, and each criterion has specific levels
-of grading. The criterion is an element of the assignment that needs to be met. The
-levels are the extent to which this criterion has been met. Statements are added and
-are used to assess the work, and when grading we can choose the relevant statement
-based on the extent to which this criterion has been met. For assignments that have
-multiple criteria, the points awarded for each criterion are added together to create
-the final grade.
+<center><figure>
+    <img src="./images/f10.PNG" alt="" />
+    <figcaption><small>Figure 10. Rubric design example.</small><figcaption>
+<figure>
 
-The default setting within a rubric is for one criterion, with three points levels
-ranging from zero to two points. Additional criterion as well as additional grading
-levels for each criterion can be added (the number of grading levels can also be
-removed so that there can be fewer than three grading levels). The points awarded
-for each level can also be amended.
+The steps to add these criteria and levels to the course are:
 
-We will be setting up three criteria, each with a top grade of 10. If the student is
-graded the top marks for each of the three criteria, they will receive the top grade
-of 30 (we set 30 as the maximum grade when we added the assignment).
+| Step | Operation                                                    |
+| ---- | :----------------------------------------------------------- |
+| 1.   | Click on _Edit criterion_                                    |
+| 2.   | Fill in (maximum 1000 words)                                 |
+| 3.   | Click on _Edit level_  (Check poits is set to 0)             |
+| 4.   | Repeat for the rest of levels adding levels using the buttom _Add level__ |
+| 5.   | Click outside the screen to abandon the level editing        |
+| 6.   | Save rubric and make it ready                                |
 
-```
-As with the marking guide, the criteria does not need to always add
-up to the maximum grade given for the assignment, as a normalization
-process will convert the grade. This will be explained in Chapter 5 ,
-Using Calculations.
-```
+The rubric is now ready. If you want to edit your rubric, you will need to use the _Administration block_. Clicking on _Advanced grading_  and then _Define rubric_ take you to the Rubric editing screen.
 
-You can see the criteria we will be using in the following table; we will be using the
-same point system for each level in this example:
+## Adding additional grading directly into the Gradebook
 
-```
-Criterion 0 points 3 points 6 points 10 points
-The assignment
-should be 1,000
-words
-The word count
-is below 800
-words or over
-1,200 words
-The word count
-is between
-800 and 1,049
-words
-The word count
-is between
-1,050 and 1,200
-words
-The
-assignment is
-between 1,000
-and 1,050
-words
-At least 5
-quotes should
-be used and
-be correctly
-referenced
-No quotes
-used or quotes
-used but not
-referenced
-Some quotes
-included
-but not fully
-referenced
-5 quotes
-included
-and partly
-referenced
-5 or more
-quotes
-included
-and correctly
-referenced
-The assignment
-brief met
-(4 elements)
-2 or fewer
-elements
-covered
-3 elements
-covered
-4 elements
-covered but
-more detail
-could be
-included
-All 4 elements
-covered in
-detail
-```
+If you want a grade that is not linked to an activity to be added to the Gradebook, y might add a _Graded item_ into the Moodle Gradebook, can be. To do this, follow this steps:
 
-*Adding Graded Activities*
-
-Let's add these criteria and levels to the course. We will add the first one together:
-
-1. Click on the gray **Click to edit criterion** text to add the criteria detail.
-2. Type in the first criterion (The assignment should be 1000 words).
-   You can make the text box larger by holding your cursor in the bottom-right
-   section of the box and dragging the box to make it bigger.
-3. Click on the gray **Click to edit level** text in the box on the right-hand side of
-   the criterion we have just added. This is where we need to type the statement
-   for the zero points level shown in the preceding table (The word count is
-   below 800 words or over 1200 words). Make sure the **points** box reads 0.
-4. Click on the next gray **Click to edit level** text in the box (currently, the 1
-   points level). Type in the three points level statement from the table.
-   Change the points number to 3.
-5. Click on the last available level box and add in the six points statement and
-   change the number of points to 6.
-6. We have now run out of the default number of levels but we still need to add
-   the ten points level. Click on the **Add level** button on the right-hand side of
-   the current level that we are working on.
-7. Add in the level statement for ten points and change the points to 10.
-8. Click anywhere on the screen to finalize this text.
-9. We now need to add another line for the next criterion. Under the current
-   criterion, there is a **Add criterion** button. Click on this and an additional
-   row to add another criterion and the level statements and points will appear.
-   Use the preceding table to complete this rubric. Once completed, your rubric
-   table should look like this:
-
-```
-Chapter 3
-```
-
-1. Underneath the criteria section of the rubric creation page, there are a
-   number of options that show you how the rubric can be used. The text
-   explains the options, and these are turned on by adding a tick and turned
-   off by removing the tick. Keep them all turned on, as shown in the following
-   screenshot:
-
-*Adding Graded Activities*
-
-1. Scroll to the bottom of the screen and click on **Save rubric and make it ready**.
-2. The rubric is now ready for use when grading the assignment. We will look
-   at how to grade this in the next chapter.
-3. If you want to edit your rubric, you will need to use the **Administration** block
-   when you are viewing the assignment on the screen. Click on **Advanced**
-   **grading** and then choose **Define rubric** , which will take you to the Rubric
-   editing screen.
-
-### Adding additional grading directly into the Gradebook
-
-We have looked at how we can add graded activities to a Moodle course so that
-they can be awarded a mark and used with the Gradebook. This is the main way in
-which we grade an assessment, as the students need to complete something in order
-to be graded (such as an assignment, quiz, discussion, or any other Moodle activity).
-We can also use the assignment tool to provide feedback on a student's assignment
-even if the students do not submit any work online, such as class presentations or
-practical work.
-
-However, what if we would like a grade that is not linked to an activity to be added
-to the Gradebook? Perhaps students receive an additional grade based on their
-attendance in lessons. You might want the grade to be in the Gradebook for the final
-course grade but you do not want it to appear as an activity within the Moodle course.
-This is where a **Graded item** , added directly into the Moodle Gradebook, can be
-useful. The following steps indicate the steps to be followed:
-
-1. From the main course screen, find the **Administration** block and click on
-   **Grades** to get to the Gradebook.
-2. Go into the **Categories and items** screen (click on the **Categories and items**
-   tab on the top of the page if the tabs are available. Otherwise, click on the
-   drop-down list and click on **Simple view** under the **categories and items**
-   heading).
-3. Scroll to the bottom of the screen and click on the **Add** grade item.
-   The following screenshot will appear:
-
-```
-Chapter 3
-```
-
-1. Give the graded item a name (add in the Attendance grade title).
-
-```
-There are four Grade types available for graded items:
-° Value : This enables a number grade to be awarded. If this is used,
-the maximum and minimum grades possible can be set. For this
-example, we will keep the default options of Minimum grade
-0.00 and Maximum grade 100.00).
-° Scale : This allows you to choose a scale that is available within
-the course in order to grade this item. If this is chosen, the scale's
-drop-down list becomes available to enable us to choose the scale
-we would like to use.
-° Text : This does not allow any grade to be used, but written feedback
-can be added. This will not be used in Gradebook calculations.
-° None : This means that no grade is assigned to this item.
-```
-
-1. Click on **Save changes** at the bottom of the screen and go back to the main
-   course screen.
-
-*Adding Graded Activities*
+| Step | Operation                                                    |
+| ---- | :----------------------------------------------------------- |
+| 1.   | Find _Administration block_ and select _Grades_.             |
+| 2.   | Go to _Categories and items_                                 |
+| 3.   | Click on  _Add grade_ item                                   |
+| 4.   | Give the graded item a name                                  |
+| 5.   | Select the _Grage type_<br>    - Value : a number<br/>    - Scale : select an existiing or create a new one<br/>    - Text : This does not allow any grade to be used, but written feedback<br/>    - None : This means that no grade is assigned to this item. |
+| 6.   | Save changes                                                 |
 
 # Assigning Grades
-
-In the previous chapter, we added a total of five assignments using scales, number
-grades, outcomes, a marking guide, and a rubric. We also added a graded item
-directly into the Gradebook.
 
 Once graded activities are added to a Moodle course, we need to award grades to
 students. Some of the activities are graded by Moodle, such as quizzes and some
 elements of lessons, but activities with a lot of written content need to be reviewed
 and graded by the teacher.
 
-In this chapter, we will look at different ways of grading work using a range of
-grade types. We will see how to:
-
-- Grade assignments with number grades, scales, outcomes, marking guides,
-  and rubrics
-- Add written feedback, including inline comments with online text submitted
-  by students
-- Download and upload grades using the offline grading options
-- Use quick grading directly within the Gradebook
-
-*Assigning Grades*
-
-### Grading an assignment
+## Grading an assignment
 
 Let's first find our way to assignments and the grading screen. Within a course,
 we need to click on the name of the assignment that we want to grade. If you created
@@ -1413,210 +1158,74 @@ final course grades. We will also see how we can further customize the Gradebook
 
 # Using Calculations
 
-In this chapter, you will learn about the various options and settings available to
-calculate and display a final grade in the Gradebook. We will also look at the options
-available when choosing how the grades are displayed. In this chapter, we will cover
-the following sections:
+There are various options and settings available to calculate and display a final grade in the Gradebook.
 
-- How grades are calculated
-- Using a range of preset aggregations to calculate course totals
-- Changing how grades are shown in the Gradebook
-
-### Calculating the course grade
+## Calculations on the grade
 
 All graded activities that are added to the online course will automatically be added
 to the Gradebook. Students can have a range of assessments for which they will be
-given a range of scores. Apart from storing these grades, the Gradebook can also
-calculate a final grade based on a range of preset aggregation settings available
-within the course. Aggregation means to bring together all the scores and then
-perform a calculation to present a final grade.
+given a range of scores. The Moodle Gradebook:
 
-Before this aggregation takes place, a normalization process happens. Normalization
-is when the grade given to an individual assessment is converted into a decimal for
-the calculations.
+- Stores the grades.
+- Calculate a final grade based on a set of rules.
 
-#### Why use normalization?
+This implies a previous normalization process. Normalization means that when the grade given to an individual assessment, is converted into a decimal number for the calculation.
 
-Normalization is required in order to ensure that all the grades have the same base
-value so that they can be calculated fairly in relation to the maximum grade. For
-example, a grade of 20 out of 100 is a lower percentage score than 20 out of 20, so
-using both scores as 20 would not accurately represent the real achievement of
-the student.
+## Reasons to use normalization
 
-*Using Calculations*
+Normalization is required in order to ensure that all the grades have the same base value so that they can be calculated fairly in relation to the maximum grade. To calculate a fair total, we need both of the grades to be recalculated to a decimal so that they have the same base value prior to adding them together for the final course grade. 
 
-For the Gradebook to calculate a fair total, we need both of the grades to be
-recalculated to a decimal so that they have the same base value prior to adding them
-together for the final course grade. The calculation of normalization is the grade
-awarded, divided by the total grade possible so that all the graded activities have a
-base value of 10. The following table shows this for the two activities in this example:
+Calculation of normalization is the grade awarded, divided by the total grade possible so that all the graded activities have a base value of 10. 
 
-```
-Graded activity 1 Graded activity 2
-Maximum grade possible 20 100
-Grade awarded 20 20
-Grade following
-normalization
-1.0 0.2
-```
+The following table shows this for the two activities in this example:
 
-As you can see, the normalized grade now shows that the two awarded scores of
-20 should not be treated the same when calculating the final course grade as they
-have significantly different decimal scores. This is this score that is used in the
+|                     | Graded activity 1 | Graded activity 2 | Graded activity 3 |
+| ------------------- | :---------------: | :---------------: | :---------------: |
+| Maximum grade       |        25         |        100        |        50         |
+| Grade awarded       |        10         |        30         |        10         |
+| Grade normalization |        1.0        |       0.25        |        0.5        |
+
+The normalization shows that the two awarded scores of 10 should not "weight" the same in the final course grade as they have significantly different decimal scores. This is this score that is used in the
 aggregation process.
 
-We will see many more examples of how this normalization process is used as we
-complete examples throughout the chapter and see how the different aggregation
-types use the normalized grades.
+## Aggregation types
 
-#### Aggregation types
+A wide range of aggregation types is available in Moodle. For the preceeding examples, the normalized grades of 1.0, 0.25, and 0.5 as shown in the previous example, will be used:
 
-Moodle has a range of aggregation types available, and these are outlined briefly in
-the upcoming section. These are shown in the order in which they are listed within
-Moodle. The ones shown in bold are some of the most popular or more complex to
-understand so will be used as detailed examples later in the chapter, and the actual
-calculations will be explained in more detail. However, for each aggregation type,
-quick examples will also be given to show the calculation that takes place. For all the
-examples, the normalized grades of 1.0 and 0.2, as shown in the previous example,
-will be used:
-
-- The **mean of grades** : Following normalization, the average score is calculated
-  as the final score by adding up the total grades awarded and dividing it by
-  the total number of graded items, for example, *(1.0 + 0.2)/2=0.6*.
-- The **weighted mean of grades** : Each graded item can be given a weight. The
-  grade given for the assessed item is normalized and then multiplied by the
-  item's weight to create an increased item grade. The final grade is calculated
-  by adding together the increased item grades and then dividing them by the
-  total weights applied (for example, if two assessments are given a x2 weight,
-  the total of the increased grades added together will be divided by four). In
-  this example, graded item one will be given a weighting of x2 and graded
-  item two will be given a weighting of x3: *(1.0x2)+(0.2x3)/5=0.52*.
-
-```
-Chapter 5
-```
-
-- The **simple weighted mean of grades** : This is the default aggregation
-  method when no settings have been changed within the Gradebook. In
-  this version of the weighted mean type, the maximum grades of each
-  assessed item are used as the weighting instead of the teacher needing to
-  apply separate weights to each graded activity. For example, one assessed
-  activity could be graded out of 100 and another activity could be graded
-  out of 50. The first graded item would be worth more to the final course
-  total than the second. Again, the Gradebook first normalizes the grade
-  and then multiplies that grade by the total grade possible. These increased
-  assessment activity grades are then divided by the total weight possible
-  (that is, the total of all the maximum grades in the course), for example,
-  *(1.0x20)+(0.2x100)/120=0.333*.
-- The **mean of grades (with extra credit)** : This aggregation type is only
-  available in Moodle to enable upgraded courses that already use this
-  aggregation type to continue to use it (that is, for backwards compatibility).
-  Instead, the weighted and simple weighted mean options should be used to
-  prevent the use of an aggregation method that is no longer supported .Where
-  this aggregation is still used, it is possible to apply an extra credit grade that
-  can be added to the final mean grade. Any item with no extra credit applied
-  will be used as part of the final mean calculation. However, items with extra
-  credit applied will be added to the final total in addition to the mean grade.
-  For our example, we will add an additional graded item with the score of
-  1.0, but this will be given extra credit of 2.0. The other two grades will not
-  have any extra credit applied, so the mean calculation will apply to these.
-  In this example, the mean grade— *(1.0 + 0.2)/2=0.6* —is added to the extra
-  credit grade *(1.0x2)=2.0*. The final grade is 2.6.
-- The **median of grades** : All the normalized grades are put into a numerical
-  order from the lowest to the highest, and the final grade will be the grade in
-  the middle of this list. If there is no middle number (if the total number of
-  grades is an even number), Moodle will take the two middle numbers and
-  present the average grade of these two as the final grade. For example, as
-  there are only two numbers in our example, the final course grade will be an
-  average— *(1.0+02)/2=0.6*. An additional graded item will be included as an
-  example. This grade will be 30 out of 30, which will provide a normalized
-  grade of 1.0. Therefore, there are now three grades for this example: 0.2, 1.0,
-  and 1.0, which are shown in a lowest to highest order. The Gradebook will
-  present the final grade as 1.0, as this is the grade in the middle.
-- The **lowest grade** : This reviews all the grades after normalization and presents
-  the lowest score as the final grade. For example, the final grade will be 0.2.
-
-*Using Calculations*
-
-- The **highest grade** : This reviews all the grades after normalization and presents
-  the highest score as the final grade. For example, the final grade will be 1.0.
-- The **mode of grades** : Following normalization, the Gradebook reviews all
-  the grades and the grade that is awarded most frequently is presented as
+- The _mean of grades_ is the average score calculated as: (1.0 + 0.25 +0.5)/3=0.583.
+- The _weighted mean of grades_ means that each item has a weight so the final grade is normalized. For example if first assessment has "x1" weight, the second "x2" and the thirt "x3", the final grade is calculated as: (1.0 + 0.25·2 + 0.5·3)/3 = 0.5.
+- The _Simple weighted mean of grades_ is the default aggregation method (no settings changed). For example, one activity scores 100, other 50. The Gradebook first normalizes the grade and then multiplies that grade by the total grade possible.
+- The _mean of grades (with extra credit)_ is kept to be compatible with older Moodle versions.
+- The _median of grades_  uses mean insterad of average. 
+- The _lowest grade_ reviews all the grades after normalization and presents the lowest score. 
+- The _highest grade_ reviews all the grades after normalization and presents the highest score.
+- The _mode of grades_ reviews and takes the most frequently is presented as
   the final grade, for example, 0.2, 1.0, and 1.0. The final grade is 1.0.
-- **Sum of grades** : This is the only aggregation method that does not use
-  normalization. In this aggregation type, the Gradebook simply adds together
-  each score awarded for each assessment. This maximum grade possible for
-  the course is the sum of all the maximum grades possible for each individual
-  assessment added together, for example, *20 + 20 = 40* out of a maximum
-  grade of 120.
+- _Sum of grades_ is the only aggregation method that does not use normalization. 
 
 #### Maximum grades
 
-It is possible to set a maximum score for the course, which means that Moodle will
-calculate the final score based on that maximum grade.
+It is possible to set a maximum score, then, Moodle calculate the final score based on it.
 
-For example, 10 assessments in a course, each with a maximum grade of 25, will have
-a course total of 250. However, the final course grade achievable might only be 100.
-Therefore, the aggregation process can also convert the final score so that it is graded
-out of 100 (rather than 250).
+>  E.g. For example, 5 assessments each with a maximum grade of 250 sum 1250. However, the final grade might be 10. Therefore the aggregation convert the final score to 10 (not 1250).
 
-Where a maximum score is applied, the Gradebook will add an additional
-calculation after the aggregation, as shown in the following step 3. Therefore,
-the full aggregation process will be as follows:
+##### Example
 
-1. Normalize grades.
-2. Calculate the aggregation (for example, apply weights, add grades together,
-   calculate the average, and so on).
-3. Multiply the aggregated normalized grades by the course maximum grade.
+We have are three graded activities, each with a different maximum. 
 
-```
-Maximum grades do not apply to the sum of grades aggregation.
-Chapter 5
-```
+The aggregation is set then as a calculation, the average of the grades. The maximum grade possible for
+the whole course is 10.
 
-Confused? Let's take a look at an example to see the normalization, aggregation,
-and maximum grade calculations in action! Take a look at the following table and
-note the formulas shown in brackets to see the processes that the Gradebook is
-completing for us.
+| Assignment |        I |   II |  III | Total | Average | Final |
+| ---------- | -------: | ---: | ---: | ----: | ------: | ----: |
+| Max.       |      250 |  250 |  500 |  1000 |  333.33 |       |
+| Score      |      150 |  120 |  300 |   570 |   190.0 |       |
+| Normalized | 0.60[^a] | 0.48 | 0.60 |  0.57 |    0.57 |   5.7 |
 
-In this example, there are five graded activities within the course, each with a
-different maximum grade possible. The Gradebook aggregation is set as a calculation
-of the mean of grades (the average of the grades). The maximum grade possible for
-the whole course is 100. The shaded row is the information that the Gradebook uses
-for the aggregation/calculations.
+[^a]: calculated as score/Máx for each assignment.
+[^b]: calculated as average normalized (0.57) / number of assignmets (3)
 
-```
-Assignment A1 A2 A3 A4 A5 Usual total Mean
-aggregation
-Final grade
-shown
-in the
-Gradebook
-Max grade
-possible
-25 50 40 25 20 160 32
-Grade
-awarded
-20 35 38 25 15 133 26.6
-Normalized
-grade (a)
-0.8
-(20/25)
-0.7
-(35/50)
-0.95
-(38/40)
-1
-(25/25)
-0.75
-(15/20)
-4.2 (b)
-(.8+.7+.95+1+.75)
-0.84
-(4.2/5)
-84 (c)
-(.84*100)
-```
+
 
 The preceding table can be explained as follows:
 
@@ -3464,7 +3073,7 @@ grades, add written feedback, grade outcomes, and make use of the marking guides
 and rubrics we created. We will also review the options within the marking workflow,
 use the offline grading worksheet, and grade work directly within the Gradebook.
 
-## Gradebook Glossary of Terms
+# Gradebook Glossary of Terms
 
 Here are some terms used in the gradebook, both in the development and the user interface. Using these terms in discussions about the gradebook will help to reduce confusion.
 
@@ -3500,3 +3109,4 @@ Here are some terms used in the gradebook, both in the development and the user 
 [^8]: Determines the minimum grade to pass: In green we'll see passed. In red not passed.
 [^9]: This is a proposal for an additional feature to allow marks to be reviewed and approved before release to students.
 
+[^10]: If no rubric form is created at this stage, the simple direct grading method will be used; this means that the teacher will manually add in the final grade rather than grade the assignment using the criteria.
