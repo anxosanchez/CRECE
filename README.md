@@ -57,4 +57,4 @@ img[src*="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-s
 
 according to the terms of the [Guidelines for the Use of the Grant, Section 7.1](http://hepmp.med.bg.ac.rs/wp-content/uploads/2018/02/guidelines_for_the_use_of_the_grant_2017_cbhe_v_ii_-_09_january_2018_0-702763d5-b014-4f99-81a0-928c4bb8aa7a.pdf)
 
-![](https://your-image-url.type) with <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png" width="40" height="10">
+![](https://your-image-url.type) with <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png" width="100" height="25">
