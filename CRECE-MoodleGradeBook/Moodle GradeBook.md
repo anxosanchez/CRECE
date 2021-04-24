@@ -15,25 +15,17 @@ All courses in Moodle have a grading area, known as the **Gradebook**. A lot of 
 
 Depending on the configuration ant the appearance decided by your moodle administrator, the **Gradebook** can appear or not as a direct acces on the dashboard or the left menu of your moodle course. An example can be seen in the [figure 1]. In thsi case tht gradebook has a direc acces from the left menu.
 
-<img src="./images/f1.png" alt="Figure 1. Accesing the GradeBook."  />
-
-<center><small>
-        Figure 1. Accesing the <bold>GradeBook</bold>.
-</small></center>
+<img src="./images/f1.png" alt="Figure 1. Accesing the GradeBook."  /><figcaption><center><small>Figure 1. Accesing the <bold>GradeBook</bold>.</small><center></figcaption>
 
 
-
-<center><figure>
-    <img src="./images/f2.PNG" alt="" />
+<img src="./images/f2.PNG" alt="" />
     <figcaption><small>Figure 1. Accesing the <bold>GradeBook</bold></small>.<figcaption>
 <figure>
 
 Selecting the grades from the menu, we access to the main gradebook as we can see  in figure 2.
 
-<center><figure>
-    <img src="./images/f2.PNG" alt="" />
-    <figcaption><small>Figure 2. initiating the gradebook</small>.<figcaption>
-<figure>
+<img src="./images/f2.PNG" alt="" />
+    <figcaption><small>Figure 2. initiating the gradebook</small>.<figcaption>  
 
 You can see two rows in the menu:
 
