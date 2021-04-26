@@ -1,0 +1,15 @@
+---
+title: Introduction to Markdown
+author: Anxo Sánchez
+rights: Creative Commons 4.0
+lang: en-US
+tags: [pandoc, book, markdown, cbhe-crece]
+abstract: |
+  This is a turorial made for Cubans partenrs of the CBHE-CRECE Erasmus+ Project by the Universiry to Vigo Team.
+
+mainfont: DejaVu Sans
+
+# Filter preferences:
+# - pandoc-crossref
+linkReferences: true
+---
