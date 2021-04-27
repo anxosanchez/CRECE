@@ -19,9 +19,11 @@ Grade tasks 1 and 2 for at least one learner. Steps are:
 | 3.   | From drop-down list find _Categories and items_, choose _Simple view_. |
 | 4.   | Customize the Gradebook and choose the aggregation type. Go to _Categories and items_ change the aggregation to _Mean of grades_, then click on _Save changes_ (not the only way to this). |
 | 5.   | Max grade_ shows the maximum grade possible for each graded item. The number at the bottom of the table is the total final grade possible. In this example, 100. |
-| 6.   | In the drop-down list find _View_  and click on _Grader report__. |
+| 6.   | In the drop-down list find _View_  and click on _Grader report_. |
 
+We can customize choosing the _arrgegation type_. Inthis case wur choose _Mean of grades_.
 
+Take a look at the information of _User 3_ who has completed two assessments that have been graded. His current course total is 95.50 (91+100)/2. However, this only works because the course total is the same as the assignment maximum grades. 
 
 | User           | Task 1 | Task 2 | Task 3 | $\overline{x}$ course total |
 | -------------- | -----: | -----: | -----: | --------------------------: |
@@ -32,9 +34,7 @@ Grade tasks 1 and 2 for at least one learner. Steps are:
 | User 5         |   70.0 |   80.0 |        |                        75.0 |
 | Overal average |   88.0 |   93.3 |        |                        91.3 |
 
-Take a look at the information of _User 3_ who has completed two assessments that
-have been graded. His current course total is 95.50 (91+100)/2. However, this only works because the
-course total is the same as the assignment maximum grades. If the course total was 50, we could not have performed this simple calculation for the course total. This is why Moodle first normalizes grades and then multiplies this by the maximum course total possible. 
+If the course total was 75, we could not have performed this simple calculation for the course total. This is why Moodle first normalizes grades and then multiplies this by the maximum course total possible. 
 
 So, the calculation that Moodle is actually doing for _User 3_ is:
 
@@ -50,90 +50,52 @@ So, the calculation that Moodle is actually doing for _User 3_ is:
 [^d]: 1.91/2
 [^e]: (95.5*100)
 
-If you want to provide a running total? What if you want the students to know the final grade they will
-get based on the work completed to date even if it is not complete yet? This is
-particularly important if all assignments need to be completed in order to complete
-the course and gain a final grade.
+This score means that all assignments have been completed.
 
-#### Including all graded activities
+### Including all graded activities
 
 We can tell the Gradebook to include all the graded activities in the aggregation.
 Moodle will add up each assessed activity, which will include a zero score for each
 assessed item that has not been submitted or graded yet, and then it will divide the
 grade by the total number of assessed grades in the course regardless of whether
-they have been graded or not. In this example, it will be divided by three. Let's go
-and apply this and see it in action:
+they have been graded or not. 
 
-1. Go to **Categories and items** again (either by clicking on the drop-down list
-   and clicking on **Simple view** under the **categories and items** heading or
-   by clicking on **Categories and items** in the tabs bar).
-2. In the top row in the **Actions** column (in the same row as the aggregation
-   drop-down list), the first icon is an edit icon (a cog icon for the default
-   Moodle theme; if you hold your mouse over the first icon, it will give
-   you a screen tip that says edit). Click on the edit icon.
+In this example, it will be divided by three. Let's go and apply this and see it in action:
 
-We are only going to use the **Grade category** section for now. However, the options
-that we need are not shown on the screen so we need to click on **Show more** :
+| Step | Action                                                       |
+| ---- | ------------------------------------------------------------ |
+| 1.   | Go to _Categories and items_, on _Simple view_.              |
+| 2.   | In _Actions_ first icon click on that icon (is an edit icon) . |
 
-*Using Calculations*
+Let's take a look at the Gradebook again to see what difference this has made (__View_, click on _Grader report_).
 
-Note that you can change the aggregation method on this screen. However, the
-setting we need to change is the **Aggregate only non-empty grades** option. Notice
-that this box is currently checked. Click on the box to remove the tick and scroll to
-the bottom of the screen to go to **Save changes**.
+The calculation that is taking place for _User 3_ as follows:
 
-```
-This option can be applied with any aggregation type (except the sum
-of grades) by clicking on the edit icon in the Actions column on the
-Categories and items screen.
-```
+| Name            | Task 1 | Task 2 | Task 3 | Course total |
+| --------------- | -----: | -----: | -----: | -----------: |
+| User 1          |  94.00 |      - |      - |        31.33 |
+| User 2          |  99.00 |      - |      - |         33.0 |
+| User 3          |  91.00 | 100.00 |      - |        63.67 |
+| User 4          |  86.00 | 100.00 |      - |        62.00 |
+| User 5          |  75.00 |  80.00 |      - |        51.67 |
+| Overall average |   88.0 |  93.33 |      - |        48,33 |
 
-Let's take a look at the Gradebook again to see what difference this has made.
-(To go back to the Gradebook, use the drop-down list at the top of the screen,
-find **View** , and click on **Grader report** or click on **View** in the tab at the top
-of the Gradebook screen.)
 
-You can see that the course total has now changed as it is including all the graded
-items in the aggregation. The fewer items that have been marked the lower the grade
-will be. The calculation that is taking place for **Bayley W** is now as follows:
 
-```
-Task 1 Task 2 Task 3 Total Mean
-aggregation
-Final grade
-shown in
-Gradebook
-Max grade
-possible
-100 100 50
-Grade
-awarded
-91.00 100.00 0 191 63.67
-normalized
-grade
-0.91
-(91/100)
-1
-(100/100)
-0
-(0/50)
-1.91
-(0.91+1+0)
-0.6367
-(1.91/3)
-63.67
-(.06367*100)
-```
+|                  |     Task 1 |  Task 2 | Task 3 |    Total | Mean       |    Final |
+| ---------------- | ---------: | ------: | -----: | -------: | ---------- | -------: |
+| Max grade        |        100 |     100 |     50 |          |            |          |
+| Grade actual     |       91.0 |   100.0 |      0 |    191.0 | 63.67      |          |
+| Normalized grade | 0.91([^f]) | 1.0[^g] |  0[^h] | 1.91[^h] | 0.6367[^i] | 95.4[^e] |
 
-We have been using the mean of grades, but there are two other mean
-aggregation types.
+[^f]: 91/100
+[^g]: 100/100
+[^h]: 0/50
+[^i]: 0.91+ 1 + 0
+[^j]: 1.91/3
+[^k]: 0.06367*100
 
-Let's keep using this example but change the Gradebook to show **Simple weighted
-mean of grades** and the **Weighted mean of grades** to see how they affect the final
-aggregation. This will also give us the chance to practice how to change aggregation
-types within the course.
-
-#### The simple weighted mean of grades
+### The simple weighted mean of grades
 
 In the mean of the grades aggregation type that we have been using, the totals for
 each assignment type are not taken into consideration in the final aggregation (other
