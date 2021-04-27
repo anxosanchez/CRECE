@@ -1,4 +1,4 @@
-# Moodle GradeBook
+# Introduction
 
 If you area moodle user, and teacher, you probably need to make the avaliation of the outcomes. The Gradebook can be a valuable tool that will help you to track the students' progress through assessment and required activities. You wi'll need
 
@@ -15,25 +15,19 @@ All courses in Moodle have a grading area, known as the **Gradebook**. A lot of 
 
 Depending on the configuration ant the appearance decided by your moodle administrator, the **Gradebook** can appear or not as a direct acces on the dashboard or the left menu of your moodle course. An example can be seen in the [figure 1]. In thsi case tht gradebook has a direc acces from the left menu.
 
-<img src="./images/f1.png" alt="Figure 1. Accesing the GradeBook."  />
+<img src="../../images/f1.png" alt="Figure 1. Accesing the GradeBook."  />
 
 <center><small>
         Figure 1. Accesing the <bold>GradeBook</bold>.
 </small></center>
 
-
-
-<center><figure>
-    <img src="./images/f2.PNG" alt="" />
-    <figcaption><small>Figure 1. Accesing the <bold>GradeBook</bold></small>.<figcaption>
-<figure>
-
 Selecting the grades from the menu, we access to the main gradebook as we can see  in figure 2.
 
 <center><figure>
-    <img src="./images/f2.PNG" alt="" />
-    <figcaption><small>Figure 2. initiating the gradebook</small>.<figcaption>
+    <img src="../../images/f2.PNG" alt="" />
+    <figcaption><small>Figure 2. Starting the gradebook from the menu</small>.<figcaption>
 <figure>
+
 
 You can see two rows in the menu:
 
@@ -41,10 +35,7 @@ You can see two rows in the menu:
 
 - Bottom row: **Grade report**, **Grade history**, **Outcomes report**, **Overview report**, **Single view** and **User report**.
   
-    
-  
 - Graded activities automatically appear in the grades area when they are added into the main course.
-  
 - Left-hand side contains the students' names and some data.
   
 - On the far right-hand side of the table is the **Course total** , which is calculated

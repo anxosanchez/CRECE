@@ -1,4 +1,4 @@
-## Customizing Grades
+# Customizing Grades
 
 When you create an activity, you will choose how the activity will be scored and added into the course's grades area. Default grading are number grades (0–100) and a preset scale called **Separate and connected ways of knowing**[^1]. 
 
@@ -10,22 +10,22 @@ Some characteristics of gradebook concerning customizing are:
 * Scales can be created by teachers within a course.
 * Site-wide scales, (Standard scales) , can be created only by an administrator.
 
-### Numeric grades
+## Numeric grades
 
 100 is the default grade for all assessments in Moodle. If you want to grade assignments with scores higher than 100, only the administrators can change the maximum grade possible[^2].
 
-### Letter grades
+## Letter grades
 
 Some assessments or activities can be graded with a letter (**A**, **B**, etc.). **Letter grades** are number grades shown as letters in the Gradebook. 
 
 To link number to th letters, percentages are used. Figure 3 show a table of conversion to letter grades (moodle default conversio table.
 
 <center><figure>
-    <img src="./images/f3.PNG" alt="" />
+    <img src="../../images/f3.PNG" alt="" />
     <figcaption><small>Figure 2. Letter grades conversiot table.</small><figcaption>
 <figure>
 
-#### Customizing letter grades
+### Customizing letter grades
 
 The ability to edit the grade letters to meet specific course needs enables us to present information in the Gradebook to staff and students, which has more meaning than
 numbers alone can provide. For example, if our student needs to achieve 60 percent
@@ -34,7 +34,7 @@ graded at 60 percent or more shows the word **Pass** as the grade, and anything 
 60 percent shows the word **Fail**. This will make more sense to the student than the
 number grade. Let's set up an example and see an alternative use of the letter grades.
 
-#### Creating a letter grade that uses words
+### Creating a letter grade that uses words
 
 The letter grades can be customized to link to any percentage. The letters can also be changed into words (e. g. **Aprobado**, **Notable**, **Sobresaliente**, etc.).
 
@@ -78,11 +78,11 @@ Scales be used to calculate final grades, but the scores are based on the number
 Figure 4 show University of Vigo default custimized scales[^3].
 
 <center><figure>
-    <img src="./images/f4.PNG" alt="" />
+    <img src="../../images/f4.PNG" alt="" />
     <figcaption><small>Figure 4. Customized scales.</small><figcaption>
 <figure>
 
-### Using Outcomes
+## Using Outcomes
 
 Outcomes are extra elements that can be added to a graded activity in order to
 be able to grade specific elements that have been completed. Each outcome can be graded with **Scale** , but the teacher must also put in an overall grade for the graded activity. Outcomes can be especially useful for courses that require a competence oriented evaluation of students, like is recommended in Europe after the Higher Education Integration by the [Bolonia Process](https://en.wikipedia.org/wiki/Bologna_Process) [^4]. 
@@ -102,4 +102,3 @@ is show as:
 > <span style="color:blue">Full name and short name<br>Scale Description<br>Criteria 2 met Completion All elements of criteria 2 have been met<br>Criteria 1 met Completion All elements of criteria 1 have been met</span>
 
 Outcomes can only be deleted before they are added to an assignment. Once it is used in an assignment, the delete option will not be available, but you will still be able to edit. However, if the outcome is removed from all assignments, we will be able to delete the outcome from the course. Later, we'll discuss again the outcomes.
-
