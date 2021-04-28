@@ -1,4 +1,4 @@
-# Using Calculations
+# Calculations
 
 There are various options and settings available to calculate and display a final grade in the Gradebook.
 
