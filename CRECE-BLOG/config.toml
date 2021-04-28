@@ -1,0 +1,6 @@
+baseURL = "localhost"
+languageCode = "en-us"
+title = "CBHE-CRECE Blog"
+theme = "hello-friend-ng"
+publishDir = "docs"
+
