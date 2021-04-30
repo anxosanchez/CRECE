@@ -97,14 +97,9 @@ The calculation that is taking place for _User 3_ as follows:
 
 ### The simple weighted mean of grades
 
-In the mean of the grades aggregation type that we have been using, the totals for
-each assignment type are not taken into consideration in the final aggregation (other
-than for the normalization process). It is only the grades that are used. However, in
-the simple weighted mean of the grades aggregation type, the maximum grade of
-each assignment is very important. This aggregation type uses the assignment totals
-in the mean aggregation step of the calculation.
-
 Let's change the aggregation of the course and see what it does to the final grade:
+
+
 
 1. Go to **Categories and items** again (either by clicking on the drop-down list
    and clicking on **Simple view** under the **categories and items** heading, or by
