@@ -1,56 +1,201 @@
-# Grading examples
+# Using Calculations
 
-## Mean of grades
+There are various options and settings available to calculate and display a final grade in the Gradebook.
 
-The parameters of this example are related on table 1.
+## Calculations on the grade
 
-| Assignment | Max. grade |
-| ---------- | ---------- |
-| Task 1     | 100        |
-| Task 2     | 100        |
-| Task 3     | 50         |
+All graded activities that are added to the online course will automatically be added
+to the Gradebook. Students can have a range of assessments for which they will be
+given a range of scores. The Moodle Gradebook:
 
-Grade tasks 1 and 2 for at least one learner. Steps are:
+- Stores the grades.
+- Calculate a final grade based on a set of rules.
 
-| Step | Action                                                       |
-| ---- | ------------------------------------------------------------ |
-| 1.   | Go to _Grades_ and choose the _aggregation type__            |
-| 2.   | Click on _Administration_ and then on _Grades_. The overall averageshow an average grade based on all the students rather than an individual student's averagegrade (it is shown for all aggregation types). |
-| 3.   | From drop-down list find _Categories and items_, choose _Simple view_. |
-| 4.   | Customize the Gradebook and choose the aggregation type. Go to _Categories and items_ change the aggregation to _Mean of grades_, then click on _Save changes_ (not the only way to this). |
-| 5.   | Max grade_ shows the maximum grade possible for each graded item. The number at the bottom of the table is the total final grade possible. In this example, 100. |
-| 6.   | In the drop-down list find _View_  and click on _Grader report_. |
+This implies a previous normalization process. Normalization means that when the grade given to an individual assessment, is converted into a decimal number for the calculation.
 
-We can customize choosing the _arrgegation type_. Inthis case wur choose _Mean of grades_.
+## Reasons to use normalization
 
-Take a look at the information of _User 3_ who has completed two assessments that have been graded. His current course total is 95.50 (91+100)/2. However, this only works because the course total is the same as the assignment maximum grades. 
+Normalization is required in order to ensure that all the grades have the same base value so that they can be calculated fairly in relation to the maximum grade. To calculate a fair total, we need both of the grades to be recalculated to a decimal so that they have the same base value prior to adding them together for the final course grade. 
 
-| User           | Task 1 | Task 2 | Task 3 | $\overline{x}$ course total |
-| -------------- | -----: | -----: | -----: | --------------------------: |
-| User 1         |   94.0 |        |        |                        94.0 |
-| User 2         |   99.0 |        |        |                        99.0 |
-| User 3         |   91.0 |  100.0 |        |                        95.5 |
-| User 4         |   86.0 |  100.0 |        |                        93.0 |
-| User 5         |   70.0 |   80.0 |        |                        75.0 |
-| Overal average |   88.0 |   93.3 |        |                        91.3 |
+Calculation of normalization is the grade awarded, divided by the total grade possible so that all the graded activities have a base value of 10. 
 
-If the course total was 75, we could not have performed this simple calculation for the course total. This is why Moodle first normalizes grades and then multiplies this by the maximum course total possible. 
+The following table shows this for the two activities in this example:
 
-So, the calculation that Moodle is actually doing for _User 3_ is:
+|                     | Graded activity 1 | Graded activity 2 | Graded activity 3 |
+| ------------------- | :---------------: | :---------------: | :---------------: |
+| Maximum grade       |        25         |        100        |        50         |
+| Grade awarded       |        10         |        30         |        10         |
+| Grade normalization |        1.0        |       0.25        |        0.5        |
 
-|                  |     Task 1 |  Task 2 |    Total | Mean      |    Final |
-| ---------------- | ---------: | ------: | -------: | --------- | -------: |
-| Max grade        |        100 |     100 |          |           |          |
-| Grade actual     |       91.0 |   100.0 |    191.0 | 95.50     |          |
-| Normalized grade | 0.91([^a]) | 1.0[^b] | 1.91[^c] | 0.995[^d] | 95.5[^e] |
+The normalization shows that the two awarded scores of 10 should not "weight" the same in the final course grade as they have significantly different decimal scores. This is this score that is used in the
+aggregation process.
 
-[^a]: 91/100
-[^b]: 100/100
-[^c]: (0.91+1.0)
-[^d]: 1.91/2
-[^e]: (95.5*100)
+## Aggregation types
 
-This score means that all assignments have been completed.
+A wide range of aggregation types is available in Moodle. For the preceeding examples, the normalized grades of 1.0, 0.25, and 0.5 as shown in the previous example, will be used:
+
+- The _mean of grades_ is the average score calculated as: (1.0 + 0.25 +0.5)/3=0.583.
+- The _weighted mean of grades_ means that each item has a weight so the final grade is normalized. For example if first assessment has "x1" weight, the second "x2" and the thirt "x3", the final grade is calculated as: (1.0 + 0.25·2 + 0.5·3)/3 = 0.5.
+- The _Simple weighted mean of grades_ is the default aggregation method (no settings changed). For example, one activity scores 100, other 50. The Gradebook first normalizes the grade and then multiplies that grade by the total grade possible.
+- The _mean of grades (with extra credit)_ is kept to be compatible with older Moodle versions.
+- The _median of grades_  uses mean insterad of average. 
+- The _lowest grade_ reviews all the grades after normalization and presents the lowest score. 
+- The _highest grade_ reviews all the grades after normalization and presents the highest score.
+- The _mode of grades_ reviews and takes the most frequently is presented as
+  the final grade, for example, 0.2, 1.0, and 1.0. The final grade is 1.0.
+- _Sum of grades_ is the only aggregation method that does not use normalization. 
+
+#### Maximum grades
+
+It is possible to set a maximum score, then, Moodle calculate the final score based on it.
+
+>  E.g. For example, 5 assessments each with a maximum grade of 250 sum 1250. However, the final grade might be 10. Therefore the aggregation convert the final score to 10 (not 1250).
+
+##### Example
+
+We have are three graded activities, each with a different maximum. 
+
+The aggregation is set then as a calculation, the average of the grades. The maximum grade possible for
+the whole course is 10.
+
+| Assignment |        I |   II |  III | Total | Average | Final |
+| ---------- | -------: | ---: | ---: | ----: | ------: | ----: |
+| Max.       |      250 |  250 |  500 |  1000 |  333.33 |       |
+| Score      |      150 |  120 |  300 |   570 |   190.0 |       |
+| Normalized | 0.60[^a] | 0.48 | 0.60 |  0.57 |    0.57 |   5.7 |
+
+[^a]: calculated as score/Máx for each assignment.
+[^b]: calculated as average normalized (0.57) / number of assignmets (3)
+
+
+
+The preceding table can be explained as follows:
+
+- **(a)** : To calculate the normalized grade, the grade awarded is divided by the
+  maximum grade for each assignment.
+- **(b)** : The mean aggregation grade is calculated by adding together the
+  normalized grade for each of the grade items. This is then divided by five
+  (the total number of grades awarded).
+- **(c)** : The final grade is 84 as the mean aggregation grade is multiplied by 100,
+  which is the course maximum. If the course maximum was 30, the final grade
+  would be *25.2 (0.84\*30=25.2)*.
+
+Let's go into the Gradebook and set up some examples to see the aggregation types
+in action and learn some other things that we can do to customize the Gradebook so
+that it can further meet our needs.
+
+*Using Calculations*
+
+### Example one – The mean of grades
+
+In this example, three assignments have been added to the Moodle course. Two have
+a maximum grade of 100 and one has a maximum grade of 50. If you want to follow
+the instructions to set up an example Gradebook, create three assignments and
+choose 100 as the maximum grade for **Task 1** and **Task 2** and 50 for **Task 3**. Grade
+**Task 1** and **Task 2** for at least one learner. In the following example, you can see
+activities we use:
+
+The aggregation type of this course will be the mean of grades, which will present a
+final average grade.
+
+Let's go into the **Grades** area and choose the aggregation type:
+
+1. Click on the **Administration** block and then click on **Grades**.
+   You should see a table like the previous one, which will show you the grades
+   of each assignment for each student. If you see an overall average row at the
+   bottom of the screen, don't let it confuse you. This is an average grade based
+   on all the students in the course rather than an individual student's average
+   grade, and it is shown for all aggregation types. You will learn more about
+   customizing this screen in *Chapter 7, Reporting with the Gradebook*.
+2. From the drop-down list at the top of the screen, find **Categories and items**
+   and choose **Simple view** (or click on the **Categories and items** tab if your
+   screen shows the tabs view).
+
+This is where we can start to customize the Gradebook and choose the
+aggregation type.
+
+You can see that the **categories and items** screen is another table with column
+headings that explain the content of the table. You can change the aggregation of the
+course from the drop-down list in the aggregation column. Click on the drop-down
+list box and choose **Mean of grades** , then click on **Save changes** at the bottom of the
+screen. This is not the only way to change the aggregation type, and we will look at
+other ways of doing this later in the chapter.
+
+Take a look at the **Max grade** column. This shows you the maximum grade possible
+for each graded item in the course and the course total, which is the number at the
+bottom of the table, shows you the total final grade possible. In this example, the
+course total is displayed as 100 as this is the default (except for the sum of grades
+aggregation type), but it can be easily changed by typing an alternative number
+into this course total box.
+
+Let's switch back to view the Gradebook. In the drop-down list at the top of the
+screen, find **View** icon and click on **Grader report** (or click on **View** on the tab
+at the top of the Gradebook screen).
+
+Before we look at other customizations possible, let's take a quick look
+at how the aggregation will work in this example. Remember, for this
+example, we are using the mean of grades aggregation type, and this type
+of calculation converts the grades to a normalized score, adds them all
+together, and divides this normalized total by the total number of graded
+items in the course. Finally, this is multiplied by the course total—in this
+case, 100—to provide the final score.
+
+Take a look at the following screenshot and you can see the **Course total** that shows
+you the mean grade for each student:
+
+Take a look at the information of **Bayley W** , who has completed two assessments that
+have been graded. His current course total is **95.50** , which could be this calculation:
+*91.00 + 100.00 / 2* (that is, the two assignment grades added together and divided by
+the total number of grades added together). However, this only works because the
+course total is the same as the assignment maximum grades. If the course total was
+50, we could not have performed this simple calculation for the course total. This
+is why Moodle first normalizes grades and then multiplies this by the maximum
+course total possible. So, the calculation that Moodle is actually doing for **Bayley W**
+is shown in the following table:
+
+| Task |
+
+
+
+
+
+ Task 1 | Task 2 Total Mean
+aggregation
+Final grade
+shown in the
+Gradebook
+Maximum
+grade
+possible
+
+```
+
+100 100
+Grade
+awarded
+91.00 100.00 191 95.50
+Normalized
+grade
+0.91
+(91/100)
+1
+(100/100)
+1.91
+(0.91+1)
+0.955
+(1.91/2)
+95.50
+(.0955*100)
+Chapter 5
+```
+
+As you can see, only the assessments that have actually been graded are included in
+the aggregation for the course total. So, the student is given a current grade based
+on work that has already been completed. However, what if you want to provide
+a running total? What if you want the students to know the final grade they will
+get based on the work completed to date even if it is not complete yet? This is
+particularly important if all assignments need to be completed in order to complete
+the course and gain a final grade.
 
 ### Including all graded activities
 
@@ -58,44 +203,83 @@ We can tell the Gradebook to include all the graded activities in the aggregatio
 Moodle will add up each assessed activity, which will include a zero score for each
 assessed item that has not been submitted or graded yet, and then it will divide the
 grade by the total number of assessed grades in the course regardless of whether
-they have been graded or not. 
+they have been graded or not. In this example, it will be divided by three. Let's go
+and apply this and see it in action:
 
-In this example, it will be divided by three. Let's go and apply this and see it in action:
+1. Go to **Categories and items** again (either by clicking on the drop-down list
+   and clicking on **Simple view** under the **categories and items** heading or
+   by clicking on **Categories and items** in the tabs bar).
+2. In the top row in the **Actions** column (in the same row as the aggregation
+   drop-down list), the first icon is an edit icon (a cog icon for the default
+   Moodle theme; if you hold your mouse over the first icon, it will give
+   you a screen tip that says edit). Click on the edit icon.
 
-| Step | Action                                                       |
-| ---- | ------------------------------------------------------------ |
-| 1.   | Go to _Categories and items_, on _Simple view_.              |
-| 2.   | In _Actions_ first icon click on that icon (is an edit icon) . |
+We are only going to use the **Grade category** section for now. However, the options
+that we need are not shown on the screen so we need to click on **Show more** :
 
-Let's take a look at the Gradebook again to see what difference this has made (__View_, click on _Grader report_).
+*Using Calculations*
 
-The calculation that is taking place for _User 3_ as follows:
+Note that you can change the aggregation method on this screen. However, the
+setting we need to change is the **Aggregate only non-empty grades** option. Notice
+that this box is currently checked. Click on the box to remove the tick and scroll to
+the bottom of the screen to go to **Save changes**.
 
-| Name            | Task 1 | Task 2 | Task 3 | Course total |
-| --------------- | -----: | -----: | -----: | -----------: |
-| User 1          |  94.00 |      - |      - |        31.33 |
-| User 2          |  99.00 |      - |      - |         33.0 |
-| User 3          |  91.00 | 100.00 |      - |        63.67 |
-| User 4          |  86.00 | 100.00 |      - |        62.00 |
-| User 5          |  75.00 |  80.00 |      - |        51.67 |
-| Overall average |   88.0 |  93.33 |      - |        48,33 |
+```
+This option can be applied with any aggregation type (except the sum
+of grades) by clicking on the edit icon in the Actions column on the
+Categories and items screen.
+```
 
+Let's take a look at the Gradebook again to see what difference this has made.
+(To go back to the Gradebook, use the drop-down list at the top of the screen,
+find **View** , and click on **Grader report** or click on **View** in the tab at the top
+of the Gradebook screen.)
 
+```
+Chapter 5
+```
 
-|                  |     Task 1 |  Task 2 | Task 3 |    Total | Mean       |    Final |
-| ---------------- | ---------: | ------: | -----: | -------: | ---------- | -------: |
-| Max grade        |        100 |     100 |     50 |          |            |          |
-| Grade actual     |       91.0 |   100.0 |      0 |    191.0 | 63.67      |          |
-| Normalized grade | 0.91([^f]) | 1.0[^g] |  0[^h] | 1.91[^h] | 0.6367[^i] | 95.4[^e] |
+You can see that the course total has now changed as it is including all the graded
+items in the aggregation. The fewer items that have been marked the lower the grade
+will be. The calculation that is taking place for **Bayley W** is now as follows:
 
-[^f]: 91/100
-[^g]: 100/100
-[^h]: 0/50
-[^i]: 0.91+ 1 + 0
-[^j]: 1.91/3
-[^k]: 0.06367*100
+```
+Task 1 Task 2 Task 3 Total Mean
+aggregation
+Final grade
+shown in
+Gradebook
+Max grade
+possible
+100 100 50
+Grade
+awarded
+91.00 100.00 0 191 63.67
+normalized
+grade
+0.91
+(91/100)
+1
+(100/100)
+0
+(0/50)
+1.91
+(0.91+1+0)
+0.6367
+(1.91/3)
+63.67
+(.06367*100)
+```
 
-### The simple weighted mean of grades
+We have been using the mean of grades, but there are two other mean
+aggregation types.
+
+Let's keep using this example but change the Gradebook to show **Simple weighted
+mean of grades** and the **Weighted mean of grades** to see how they affect the final
+aggregation. This will also give us the chance to practice how to change aggregation
+types within the course.
+
+#### The simple weighted mean of grades
 
 In the mean of the grades aggregation type that we have been using, the totals for
 each assignment type are not taken into consideration in the final aggregation (other
@@ -126,8 +310,7 @@ have been marked and graded). His score is **76.40** now.
 The calculation used in the simple weighted mean of grades is shown in the
 following table:
 
-
-
+```
 Task 1 Task 2 Task 3 Total Mean
 aggregation
 Final grade
@@ -164,9 +347,6 @@ weighting
 (191/250)
 76.40
 (.764*100)
-
-```
-
 ```
 
 As done previously, the grade awarded is normalized. However, in this aggregation
@@ -673,186 +853,3 @@ aggregation types and settings available, and you can also refer to the chapter 
 the future to apply the settings you need for your course. You can find explanations
 of each of the category types at Moodle.org: https://docs.moodle.org/27/en/
 Category_aggregation
-
-In *Chapter 6* , *Organizing the Gradebook Using Categories* , we will see how we can further
-customize the Gradebook to organize grades into categories.
-
-# Organizing the Gradebook
-
-# Using Categories
-
-The Gradebook can be difficult to use due to the amount of information shown
-within the table, especially in a course that uses a lot of graded activities. Often,
-the main course screen is arranged by topics in order to organize the content, and
-we can apply a similar process to the Gradebook through the use of categories to
-group grades by topic, assessment type, or any other preferred arrangement.
-
-We have seen how we can carry out course calculations based on how we want
-all the assignments to be added together. However, what if you want one set of
-assessments to be calculated as a mean of grades and another group of tasks to
-show the highest grade? What if you don't want some of the grades to be used
-in the calculations? We can use categories in a range of ways in order to group
-assessments together, such as by topic or assessment type. We can also use
-categories to enable some assessments to have a higher weighting than others.
-In this chapter, we will:
-
-- Create categories and learn how to add graded activities to them
-- See how categories can provide a range of aggregation types within
-  one course
-- See ways in which we can exclude grades from the final course total
-
-*Organizing the Gradebook Using Categories*
-
-### Adding categories
-
-Categories enable you to group graded activities within the Gradebook so that they
-can be viewed together and provide additional options to calculate final course
-grades. We will look at how they can be used throughout this chapter but first, we
-need to add some categories. We need to create the categories using the **Grades** area
-of the course:
-
-- Go to the **Grades** area and then go to the **Categories and items** screen
-  (if using the drop-down list, you will need to choose **Simple view** ).
-- At the bottom of the **Categories and items** screen, there is a button that
-  says **Add category**. Click on this and a new screen will appear.
-- Give the category a name (such as Unit 1). Note that the options you
-  get when setting up the category are the same as the options we used in
-  *Chapter 5, Using Calculations* to set up how the course should be aggregated.
-  This includes the grade display type as well as the aggregation method.
-  You can choose the same type of aggregation as the course or use one
-  specific aggregation type for this unit.
-- In the **Category total** section, you can set a **Maximum grade** option for the
-  category. Category totals will work in exactly the same way as the course
-  total in order to set a maximum grade available. For example, if Unit 1 has
-  three assessments each worth 100 but the maximum for Unit 1 is 100, the
-  maximum grade can be set and the aggregation will take this into account
-  when presenting a final category total. See the upcoming information box
-  for how this affects the course totals.
-- Make any further changes you would like to make to the category.
-- When you have added at least one category, you get an additional option
-  at the bottom of the screen in order to choose a **Parent category** option. This
-  allows you to choose whether the category will be a main or a subcategory
-  (a subcategory is a category nested within another category). We will look
-  at the use of subcategories later in the chapter.
-- Scroll to the bottom of the screen and click on **Save changes**.
-
-```
-When using categories, the course total is calculated using the
-category totals instead of the individual assessment grades.
-The category will complete the selected aggregation when it
-is created and present a category total. The course total will
-then use each category total in the aggregation that has been
-selected for the course total.
-Chapter 6
-```
-
-If graded activities have already been added to the course, you can use the **Categories
-and items** screen to move graded activities to the relevant categories. Once categories
-have been set up, you can choose the relevant category when initially adding the
-graded activity to the course.
-
-To move the graded activities into categories, check the small **Select** box next to each
-activity that you want to move (the **Select** column is on the right-hand side of the
-screen) and at the bottom of the screen, click on **Move selected items to** and choose
-the category you would like them to be moved to. You can also use the standard
-move icon in the **Actions** column to move individual items as required, as shown:
-
-You can also move the order of the categories after they have been created using the
-moving icon:
-
-1. Click on the move icon next the category you want to move (in the **Actions**
-   column). This will temporarily remove the category from the screen.
-2. White boxes will appear on the screen in all the places where can move the
-   category to.
-3. Click on the space where you would like the category to be.
-
-*Organizing the Gradebook Using Categories*
-
-In the following screenshot, you can see that there are three categories within the
-course and there are two aggregation types used in the course:
-
-For this example, the total of **Unit 1** will be calculated using the 'mean of grades'
-aggregation type, which means that the graded items will be divided by 2 (the total
-number of graded items in the category).
-
-**Unit 2** will present the sum of grades (in this case, the total of one assignment) as the
-category total.
-
-**Unit 3** will also show a sum of grades of the two assignments as the category total.
-
-The course total will be **Sum of grades** (as shown at the top of the preceding
-screenshot), which will add together all the grades awarded and shown in the unit
-category totals. This calculation will be *Unit 1 + Unit 2 + Unit 3*. Individual assessment
-grades will only be included in the final grade if they are not in a category.
-
-```
-Chapter 6
-```
-
-### Excluding assessments from the final grade
-
-There might be elements of the online course that are assessed but do not count
-toward a final grade. These could be formative assessments such as homework
-activities, quizzes to enable self-assessment, and so on. These graded items will
-automatically appear in the Gradebook, but you might not want the grades to be
-counted in the final category or the course total.
-
-There are two main ways in which we can do this. One is to exclude a graded
-activity for all students and the other is to exclude individual grades for each
-individual student.
-
-#### Excluding assessments from the aggregation for all students
-
-There are a few ways in which this can be achieved. One has already been mentioned
-in *Chapter 5* , *Using Calculations* , when using the weighted mean of grades. There are
-two further ways in which this can be achieved, and both require the use of categories.
-
-If you would like all the graded items that do not count for the course total to be in
-one category, you can do the following:
-
-1. Go to the **Grades** area and then go to the **Categories and items** page
-   (if using the drop-down list, choose **Simple view** under the **Categories**
-   **and items** heading).
-2. Scroll to the bottom of the screen and click on **Add category**.
-3. Give the category a name (such as formative assessments or not used
-   for final grade).
-4. Make sure the aggregation is not a sum of grades (any other aggregation
-   method is fine).
-5. Click on **Show more** within the **Category total** section. Find the **Grade type**
-   section and choose **None**.
-6. Scroll to the bottom of the screen and click on **Save changes**.
-
-Any graded activities that are listed in this category will not be included in the
-course total aggregation.
-
-You can also create the same effect by creating a category with a category total of zero.
-
-*Organizing the Gradebook Using Categories*
-
-If you would like to keep the formative assignment and the summative activities within
-the same category rather than keep all the formative work in a separate category, a
-subcategory can be used. This enables the graded items to appear together within the
-Gradebook, but they are not counted in the course total grade. To achieve this:
-
-1. Go the **Grades** area and then go to the **Categories and items** page.
-2. Go to the parent category (where you will be adding the subcategory)
-   by clicking on the edit icon next to the category name.
-3. Make sure that there is no tick next to **Aggregate including sub-categories**.
-   It is worth mentioning here that if you are using subcategories and want the
-   grades to be included in the course total, you will need to go into the parent
-   category and check this option.
-4. Click on **Save changes** at the bottom of the screen.
-5. Scroll to the bottom of the screen and click on **Add category**.
-6. Give the category a name (such as formative assessments or not used
-   for final grade).
-7. Make sure the aggregation is not sum of grades (any other aggregation
-   method is fine).
-8. Click on **Show more** in the **Category total** section and find the **Grade type**
-   section and choose **None**.
-9. At the bottom of the screen, click on the drop-down list next to **Parent**
-   category, and choose the **Parent** category that you created previously.
-10. Scroll to the bottom of the screen and click on **Save changes**.
-
-Anything moved into this category will not be included in the course aggregation,
-but it will enable the assignment to be viewed within the Gradebook with the
-relevant parent category.
