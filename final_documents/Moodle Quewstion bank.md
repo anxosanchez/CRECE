@@ -20,7 +20,7 @@ You can add questions to a category by creating new questions within a category 
 
 To add a new question to a category:
 
-1. On your course page, select the **Course Management** (black gear icon ![Course Management button (black background, white gear icon)](https://www.umass.edu/it/sites/default/files/2019/07/26/Course%20Management%20button%20%28black%20background%2C%20white%20gear%20icon%29_2.png), top right), a *Course Management* panel will open.
+1. On your course page, select the **Course Management** (black gear icon <img src="https://www.umass.edu/it/sites/default/files/2019/07/26/Course%20Management%20button%20%28black%20background%2C%20white%20gear%20icon%29_2.png" alt="Course Management button (black background, white gear icon)" style="zoom:0.5%;" />, top right), a *Course Management* panel will open.
 2. On this panel, under *Quiz Questions*, click **Question** **bank**. The *Question* *bank* page will open.
 3. **Select a** **category** from the S*elect a category* drop-down menu. The page will update to show you the list of questions within that category.
 4. Next, select **Create a new question...**. The *Choose a question type to add* window will open.
