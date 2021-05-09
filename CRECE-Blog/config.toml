@@ -1,0 +1,6 @@
+baseURL = "https://github.com/anxouvigo/crece-blog.git"
+languageCode = "en-us"
+title = "Project CBHE-CRECE Traning Blog"
+theme = "hello-friend-ng"
+
+
