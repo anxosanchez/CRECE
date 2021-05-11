@@ -1,0 +1,2252 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-fences-math .MathJax_SVG_Display, .md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: visible; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; zoom: 90%; }
+#math-inline-preview-content { zoom: 1.1; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignObject { font-size: var(--mermaid-font-zoom); }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-math .MathJax_SVG_Display { margin-top: 8px; cursor: default; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) { 
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) { 
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ''; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ''; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ''; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: '−'; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; white-space: nowrap; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; border: none !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-width: 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: 0px 0px; background-repeat: initial initial; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background-color: rgba(255, 255, 0, 0.4); background-position: initial initial; background-repeat: initial initial; }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print { 
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+  /* dark color for background*/
+  /* default color */
+  --bg-color1: hsl(220, 13%, 18%);
+  /* for most panel, context, header, etc */
+  --bg-color2: rgb(33, 37, 43);
+  /* for toc and table edit panel */
+  --bg-color3: rgba(16, 17, 20, 0.5);
+  /* for tips */
+  --bg-color4: black;
+  /* for blockquote, codeblock, input, etc */
+  --bg-color5: rgb(29, 31, 35);
+  /* light color for text and icon*/
+  /* default color */
+  --text-color1: hsl(220, 6%, 71%);
+  /* for text on panel */
+  --text-color2: rgb(220, 220, 220);
+  /* for checkbox and radio */
+  --text-color3: hsl(192, 6%, 40%);
+  /* for tips */
+  --text-color4: white;
+  /* for focus mode */
+  --text-color5: rgba(170, 178, 180, 0.5);
+  /* link color */
+  --link-color: rgb(197, 202, 210);
+  /* table color */
+  --table-border-color: rgb(100, 104, 116);
+  --table-thead-color: rgb(31, 35, 40);
+  --table-bg-color: rgb(40, 44, 52);
+  --table-bg-darker-color: rgb(35, 40, 46);
+  /* hover color */
+  /* default hover background color */
+  --hover-bg-color1: rgb(62, 66, 73);
+  /* for input item */
+  --hover-bg-color2: hsl(220, 9%, 14%);
+  /* for button on toc and table edit panel */
+  --hover-bg-color3: rgba(62, 66, 73, 0.8);
+  /* default hover text color */
+  --hover-text-color: white;
+  /* active color */
+  --active-color: var(--hover-bg-color1);
+  /* input color */
+  --input-color: rgb(29, 31, 35);
+  /* menu divider color */
+  /*   --menu-divider-color: rgb(95, 97, 101); */
+  --menu-divider-color: hsl(220, 5%, 40%);
+  /* scrollbar color */
+  --scrollbar-thumb-color: var(--menu-divider-color);
+  --scrollbar-track-color: rgba(95, 97, 101, 0.3);
+  /* theme select color */
+  --theme-select-color: rgba(255, 255, 255, 0.5);
+  --button-color: rgb(62, 66, 73);
+  --select-color: rgb(33, 37, 43);
+  /* focus color */
+  --focus-color: rgba(100, 100, 100, 0.8);
+  --focus-ring-color: var(--focus-color);
+  /* codeblock color */
+  --code-red-color: hsl(355, 65%, 65%);
+  --code-yellow-color: hsl(39, 67%, 69%);
+  --code-cyan-color: hsl(187, 47%, 55%);
+  --code-blue-color: hsl(207, 82%, 66%);
+  --code-purple-color: hsl(286, 60%, 67%);
+  --code-orange-color: hsl(29, 54%, 61%);
+  --code-green-color: hsl(95, 38%, 62%);
+  --code-grey-color: hsl(220, 9%, 55%);
+
+  --code-select-bg-color: rgb(64, 72, 89);
+  --code-cursor-color: hsl(220, 100%, 66%);
+  /* implicit selecttion text bg color */
+  --select-text-bg-color: rgb(150, 156, 170);
+  /* implicit button color */
+  --primary-color: var(--button-color);
+  --primary-btn-border-color: transparent;
+  --primary-btn-text-color: var(--text-color2);
+  /* implicit sidebar color */
+  --side-bar-bg-color: var(--bg-color2);
+  --control-text-color: var(--text-color2);
+  /* implicit text color */
+  --text-color: var(--text-color1);
+  /* implicit background color for setting menu */
+  --bg-color: var(--bg-color1);
+  /* implicit hover color */
+  --item-hover-bg-color: var(--hover-bg-color1);
+  --item-hover-text-color: var(--hover-text-color);
+  /* implicit active color */
+  --active-file-bg-color: var(--hover-bg-color);
+  /* implicit mathjax edit panel background color */
+  --rawblock-edit-panel-bd: var(--bg-color5);
+  /* implicit focus mode color */
+  --blur-text-color: var(--text-color5);
+  /* implicit search result select color */
+  --search-select-bg-color: var(--select-text-bg-color);
+  --search-select-bg-color: rgb(56, 71, 95);
+
+  --control-text-hover-color: var(--hover-text-color);
+  /* implicit active file color in sidebar file menu treeview */
+  --active-file-text-color: var(--hover-text-color);
+  --active-file-border-color: var(--hover-text-color);
+
+  --node-border: var(--menu-divider-color);
+  --node-fill: var(--bg-color2);
+}
+
+/* font */
+/* basic style */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  color: var(--text-color1);
+  background: var(--bg-color1);
+  line-height: 1.6;
+}
+
+/* text selection background color */
+.in-text-selection {
+  background-color: rgb(64, 72, 89);
+}
+
+/* link */
+#write a:not([role="menuitem"]) {
+  color: var(--link-color) !important;
+}
+
+#write a:not([role="menuitem"]):hover {
+  color: var(--hover-text-color) !important;
+}
+
+/* h1-h6 */
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+  line-height: 1em;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  padding-top: 0.3em;
+}
+
+#write h1 {
+  font-size: 2.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 3px double var(--text-color5);
+  
+}
+
+/* #write h1:before {
+  content: "\00A7  ";
+}
+ */
+#write h2 {
+  font-size: 2em;
+  padding-bottom: 0.5em;
+  border-bottom: 3px double var(--text-color5);
+}
+
+/* #write h2:before {
+  content: "\00A7  ";
+}
+ */
+#write h3 {
+  font-size: 1.75em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid var(--text-color5);
+}
+
+#write h4 {
+  font-size: 1.55em;
+}
+
+#write h5 {
+  font-size: 1.35em;
+}
+
+#write h6 {
+  font-size: 1.2em;
+}
+
+/* horizontal divider */
+hr {
+  height: 1px;
+  background-color: var(--text-color5);
+  border: 0px;
+}
+
+/* list */
+ul,
+ol {
+  padding-left: 30px;
+}
+
+/* blockquote */
+blockquote {
+  border-left: 4px solid var(--text-color1);
+  padding: 4px 15px;
+  color: var(--text-color1);
+  background-color: var(--bg-color5);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+blockquote blockquote {
+  padding-right: 0em;
+}
+
+/* table */
+.md-rawblock > .md-rawblock-container table,
+.md-table-fig,
+.md-table-fig:active {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+table thead tr {
+  background-color: var(--table-thead-color);
+}
+
+table tr th {
+  font-weight: bold;
+  border-left: 1px solid var(--table-border-color);
+  border-right: 1px solid var(--table-border-color);
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+table tbody tr {
+  border-top: 1px solid var(--table-border-color);
+  margin: 0;
+  padding: 0;
+}
+
+table tbody tr:nth-child(2n) {
+  background-color: var(--table-bg-darker-color);
+}
+
+table tbody tr:nth-child(2n + 1) {
+  background-color: var(--table-bg-color);
+}
+
+table tr td {
+  border-left: 1px solid var(--table-border-color);
+  border-right: 1px solid var(--table-border-color);
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+  border-left-width: 0px;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+  border-right-width: 0px;
+}
+
+/* table edit panel */
+.ty-table-edit {
+  background-color: var(--bg-color3);
+  border: 0px;
+  border-radius: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-top: -29px !important;
+}
+
+/* button on table edit panel */
+.ty-table-edit button {
+  background-color: transparent;
+  color: var(--text-color2);
+  border: 0px;
+  margin-left: 0px !important;
+}
+
+/* button hover on table edit panel */
+.ty-table-edit button:hover {
+  background-color: var(--hover-bg-color3);
+  color: var(--hover-text-color);
+}
+
+/* adjusting table panel */
+.popover {
+  background-color: var(--bg-color2);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* arrow of adjusting table panel */
+.popover.bottom > .arrow:after {
+  border-bottom-color: var(--bg-color2);
+}
+
+/* divider in adjust table panel */
+.md-grid-board-wrap .popover-title {
+  border-top-color: var(--menu-divider-color);
+}
+
+/* grid size */
+.md-grid-board a {
+  width: 15px;
+  height: 15px;
+}
+
+/* existing thread grid */
+.md-grid-board tr[row="1"] .md-grid-ext {
+  background-color: rgb(60, 60, 60);
+}
+
+/* not existing thread grid */
+.md-grid-board tr[row="1"] {
+  background-color: rgb(220, 220, 220);
+}
+
+/* existing grid */
+.md-grid-board .md-grid-ext {
+  background-color: rgb(120, 120, 120);
+}
+
+/* selected thread grid */
+.md-grid-board tr[row="1"] a.md-active,
+.md-grid-board tr[row="1"] a:hover {
+  background-color: rgb(60, 60, 60);
+}
+
+/* selected grid */
+.md-grid-board a.md-active,
+.md-grid-board a:hover {
+  border-color: var(--menu-divider-color);
+  background-color: rgb(120, 120, 120);
+}
+
+/* task */
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+/* footnote */
+sup.md-footnote {
+  color: var(--text-color1);
+  background-color: var(--bg-color2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* mathjax */
+/* .mathjax-block>.code-tooltip {
+    bottom: .375rem;
+}
+.md-mathjax-midline {
+    background: #fafafa;
+} */
+.md-inline-math script {
+  color: var(--text-color1);
+}
+
+.on-focus-mode #write svg {
+  opacity: 1;
+}
+
+.md-rawblock > .md-rawblock-container {
+  transition: 0.5s;
+}
+
+.md-rawblock > .md-rawblock-tooltip {
+  transition: 0.5s;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.md-rawblock:hover > .md-rawblock-tooltip {
+  transition: 0.5s;
+  visibility: visible;
+  opacity: 1;
+  animation: none;
+}
+
+/* meta information of image */
+.md-image > .md-meta {
+  border: 0px;
+  padding: 2px 0px 0px 4px;
+  font-size: 0.9em;
+  color: var(--text-color1);
+}
+
+/* input */
+input {
+  background-color: var(--input-color) !important;
+  border: 0px !important;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* input hover */
+/* input:hover {
+    background-color: var(--hover-bg-color2) !important;
+} */
+/* checkbox */
+input[type="checkbox"]:before {
+  content: "";
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  vertical-align: middle;
+  text-align: center;
+  border: 0px;
+  border-radius: 3px;
+  background-color: var(--input-color);
+  margin-top: -0.5rem;
+  margin-left: -0.2rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* checkbox hover */
+input[type="checkbox"]:not([disabled]):not(:checked):hover:before {
+  content: "\2713";
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  color: var(--text-color3);
+}
+
+/* checkbox checked*/
+input[type="checkbox"]:checked:before {
+  content: "\2713";
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  color: var(--text-color2);
+}
+
+/* checkbox checked hover*/
+input[type="checkbox"]:checked:hover:before {
+  content: "\2713";
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  color: var(--hover-text-color);
+}
+
+/* radio */
+input[type="radio"]:before {
+  content: "";
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  vertical-align: middle;
+  text-align: center;
+  border: 0px;
+  border-radius: 0.55rem;
+  background-color: var(--input-color);
+  margin-top: -0.4rem;
+  margin-left: -0.1rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* radio hover */
+input[type="radio"]:not([disabled]):not(:checked):hover:before {
+  content: "\25CF";
+  font-size: 1rem;
+  line-height: 1rem;
+  color: var(--text-color3);
+}
+
+/* radio checked */
+input[type="radio"]:checked:before {
+  content: "\25CF";
+  font-size: 1rem;
+  line-height: 1rem;
+  color: var(--text-color2);
+}
+
+/* radio checked hover*/
+input[type="radio"]:checked:before {
+  content: "\25CF";
+  font-size: 1rem;
+  line-height: 1rem;
+  color: var(--hover-text-color);
+}
+
+/* default focus style */
+:focus {
+  outline-color: var(--focus-color);
+}
+
+/* exit source view button */
+.typora-sourceview-on #toggle-sourceview-btn {
+  background-color: var(--bg-color2);
+}
+
+.typora-sourceview-on #toggle-sourceview-btn:hover {
+  background-color: var(--hover-bg-color1);
+}
+
+/* shadow for image item*/
+.md-image img {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* toc */
+.md-toc {
+  background-color: var(--bg-color3);
+  border-radius: 6px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  border: 0px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* toc content */
+.md-toc-content {
+  padding-top: 5px;
+  padding-bottom: 8px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+/* remove outline when toc is selected */
+.md-toc:focus .md-toc-content {
+  border: 0px;
+  margin: 0px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* toc item */
+.md-toc-item {
+  margin: 2px;
+}
+
+/* toc edit panel */
+#write div.md-toc-tooltip {
+  border: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: var(--bg-color3);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  display: block !important;
+  transition: 0.3s;
+}
+
+#write .md-toc:focus div.md-toc-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+#write .md-toc:focus {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+/* toc delete button */
+.md-delete-toc {
+  background-color: transparent;
+}
+
+/* html block */
+.md-htmlblock:hover .md-htmlblock-container {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  border-top-right-radius: 0px;
+}
+
+/* search panel */
+#md-searchpanel {
+  background-color: var(--bg-color2);
+  color: var(--text-color2);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ignore case button and find whole word button */
+.searchpanel-search-option-btn {
+  border: 0px;
+}
+
+/* button on search panel */
+#md-searchpanel .btn:hover {
+  color: var(--hover-text-color);
+  background-color: var(--hover-bg-color1) !important;
+}
+
+/* remove shadow around input in search panel*/
+#md-searchpanel input {
+  box-shadow: none;
+}
+
+/* search option button hover */
+.searchpanel-search-option-btn:not(.active):hover {
+  color: var(--hover-text-color);
+  background-color: var(--hover-bg-color1);
+}
+
+/* close button in search panel */
+#md-searchpanel .input-group-addon.close-btn {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* replaceall button */
+.ty-replace-panel-row #search-panel-replaceall-btn {
+  padding-left: 8px;
+  padding-right: 6px !important;
+}
+
+/* replace button */
+.ty-replace-panel-row #search-panel-replace-btn {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* sidebar */
+.sidebar-menu {
+  color: var(--text-color2);
+}
+
+/* sidebar shadow */
+#typora-sidebar,
+.typora-node #typora-sidebar {
+  box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* divider between file item and search */
+.ty-sidebar-search-panel {
+  border-color: var(--menu-divider-color);
+}
+
+/* file item in sidebar */
+#file-library .file-list-item {
+  border-bottom: 0px;
+  opacity: 1;
+  border-left: 4px solid;
+  border-color: var(--bg-color2);
+}
+
+/* file item hover */
+#file-library .file-list-item:hover {
+  background-color: var(--hover-bg-color1);
+  color: var(--hover-text-color);
+  border-color: var(--hover-bg-color1);
+}
+
+/* file item active */
+#file-library .file-list-item.active {
+  background-color: var(--hover-bg-color1);
+  color: var(--hover-text-color);
+  border-color: var(--hover-text-color);
+}
+
+/* suffix of file item*/
+.file-list-item-file-ext-part {
+  opacity: 0.8;
+}
+
+/* sidebar file menu */
+#sidebar-files-menu {
+  border: 0px;
+  box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* sidebar file menu item */
+.dropdown-menu > li > a {
+  color: var(--text-color2);
+}
+
+.dropdown-menu > li > a:hover {
+  color: var(--hover-text-color);
+}
+
+/* sidebar file menu close button */
+#close-sidebar-menu-btn:hover {
+  color: var(--hover-text-color);
+}
+
+/* sidebar file nemu divider */
+#sidebar-files-menu > .show + .menuitem-group-label.show {
+  border-color: var(--menu-divider-color);
+}
+
+/* sidebar osx tab */
+.html-for-mac .sidebar-osx-tab > .sidebar-tabs {
+  border: 0px;
+  box-shadow: 0 4px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+.html-for-mac .sidebar-content {
+  z-index: -1; /* so that the background doesn't overlap with the shadow */
+}
+
+/* sidebar footer */
+.sidebar-footer {
+  border: 0px;
+  box-shadow: 0 -4px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* remove outline when file item in treeview is selected*/
+.file-library-node:not(.file-node-root):focus > .file-node-content {
+  outline: none;
+}
+
+/* sort button on sidebar file menu */
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover {
+  color: var(--hover-text-color);
+}
+
+/* setting */
+/* header in setting */
+.window-header {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* sidebar in setting */
+.sidebar {
+  background-color: var(--bg-color2) !important;
+  box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.list-group-content {
+  margin-left: 10px !important;
+}
+
+/* sidebar button in setting menu */
+.nav-group-item {
+  color: var(--text-color2) !important;
+  border-top-left-radius: 6px !important;
+  border-bottom-left-radius: 6px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+/* sidebar button hover in setting menu */
+.nav-group-item:hover,
+.nav-group-item:active,
+.nav-group-item.active {
+  background-color: var(--hover-bg-color1) !important;
+  color: var(--hover-text-color) !important;
+}
+
+/* remove up and down button from number type input*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+}
+
+/* the indent example in setting.editor */
+div[data-index="2"] .label-input-group td:last-child div {
+  border: 0px !important;
+  border-radius: 6px;
+  background-color: var(--bg-color5);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 10px !important;
+}
+
+/* button in setting menu */
+.ty-preferences button.btn-default {
+  border: 0px;
+  background-color: var(--bg-color5);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+/* button hover in setting menu */
+.ty-preferences .btn-default:not([disabled]):hover {
+  background-color: var(--hover-bg-color1) !important;
+}
+
+/* return button in setting menu */
+.window-header button:hover {
+  color: var(--text-color2) !important;
+}
+
+/* search input in setting menu */
+.search-input {
+  border-top-left-radius: 6px !important;
+  border-bottom-left-radius: 6px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  margin-left: 10px !important;
+}
+
+.search-input:focus {
+  border: none !important;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* select item (mostly in setting menu) */
+select {
+  border: 0px;
+  border-radius: 6px;
+  background-color: var(--input-color) !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* enabled select item hover */
+select:not([disabled]):hover {
+  color: var(--text-color2);
+  opacity: 1;
+}
+
+/* disabled select item hover */
+select[disabled]:hover {
+  opacity: 0.5;
+}
+
+/* mega menu */
+.megamenu-content,
+.megamenu-opened header {
+  background: var(--bg-color1);
+}
+
+.megamenu-content {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.megamenu-opened .megamenu-content {
+  visibility: visible;
+  opacity: 1;
+  animation: none;
+}
+
+/* mega menu sidebar*/
+.megamenu-menu {
+  background-color: var(--bg-color2);
+  box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* return button in mega menu */
+#megamenu-menu-sidebar .menu-style-btn {
+  border: 0px;
+}
+
+/* remove divider in mega menu */
+.megamenu-menu-header {
+  border-color: var(--menu-divider-color);
+}
+
+/* return button color in mega menu */
+.megamenu-menu-header #megamenu-menu-header-title {
+  color: var(--text-color2);
+}
+
+/* return button hover in mega menu */
+.megamenu-menu-header:hover {
+  background-color: var(--hover-bg-color1);
+}
+
+/* return button hover in mega menu */
+.megamenu-menu-header:hover #megamenu-menu-header-title {
+  color: var(--hover-text-color);
+}
+
+/* long button in mega menu */
+.long-btn {
+  border: 0px;
+  background-color: var(--bg-color5);
+  color: var(--text-color1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+/* recent file in mega menu */
+#recent-file-panel {
+  padding: 10px;
+}
+
+#recent-document-table {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#recent-file-panel-action-btn {
+  background: var(--bg-color5);
+  border: 0px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#recent-file-panel thead tr {
+  background-color: var(--table-thead-color);
+}
+
+#recent-file-panel tbody tr:nth-child(2n) {
+  background-color: var(--table-bg-darker-color);
+}
+
+#recent-file-panel tbody tr:nth-child(2n + 1) {
+  background-color: var(--table-bg-color);
+}
+
+#recent-file-panel-action-btn:hover {
+  background-color: var(--hover-bg-color1);
+  color: var(--text-color2);
+}
+
+/* theme preview */
+.theme-preview-div {
+  box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* theme preview hover */
+.theme-preview-div:hover {
+  border-color: var(--theme-select-color);
+}
+
+/* context menu and spell check panel */
+.dropdown-menu:not(.megamenu-menu-list) {
+  background-color: var(--bg-color2);
+  color: var(--text-color2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* divider in context menu and spell check panel */
+.dropdown-menu .divider {
+  border-color: var(--menu-divider-color);
+}
+
+/* remove divider outline */
+.dropdown-menu {
+  border: 0px;
+}
+
+/* footer */
+footer.ty-footer {
+  border-top: 0px !important;
+  background-color: var(--bg-color2) !important;
+  /*     color: var(--text-color2); */
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* footer item */
+.footer-item,
+#outline-btn,
+#footer-word-count {
+  color: var(--text-color2);
+  opacity: 1;
+}
+
+/* footer item hover */
+.footer-item:hover,
+#outline-btn:hover {
+  background-color: var(--hover-bg-color1);
+  color: var(--hover-text-color);
+}
+
+/* button on some panel */
+.btn {
+  border: 0px;
+  outline-width: 0px !important;
+}
+
+.btn:hover {
+  background-color: var(--hover-bg-color1);
+  color: var(--hover-text-color);
+}
+
+/* traffic button hover */
+#top-titlebar .toolbar-icon.btn:hover {
+  color: var(--text-color2);
+  background-color: var(--hover-bg-color1);
+}
+
+/* traffic button hover */
+#top-titlebar #w-close:hover {
+  background-color: #e81123 !important;
+}
+
+/* adjust maxmize restore button height */
+.typora-maxmized #w-restore {
+  height: 24px;
+}
+
+/* left upper button hover */
+.ty-menu-btn-area:hover .ty-menu-btn-area-sub {
+  color: var(--text-color2) !important;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  padding-right: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* scrollbar track */
+::-webkit-scrollbar-track:hover {
+  background-color: var(--scrollbar-track-color) !important;
+  border-radius: 4px;
+}
+
+/* scrollbar thumb */
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--scrollbar-thumb-color) !important;
+  border-radius: 4px;
+}
+
+/* tip when hover on a button */
+#ty-tooltip {
+  background-color: var(--bg-color4);
+  color: var(--text-color4);
+}
+
+/* item container hover in context menu */
+.menu-item-container:hover {
+  background-color: var(--bg-color2);
+}
+
+/* item in context menu */
+.menu-item-container .menu-style-btn {
+  border-color: var(--menu-divider-color);
+}
+
+/* mathjax edit panel*/
+.md-rawblock-before {
+  border-top-left-radius: 6px;
+}
+
+.md-rawblock-after {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+/* mathjax focus */
+.MathJax_SVG:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+/* notification panel */
+#md-notification {
+  background-color: var(--bg-color2) !important;
+  color: var(--text-color2);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#ty-surpress-mode-warning-close-btn {
+  float: unset !important;
+  margin: 0px !important;
+}
+
+.unibody-window #md-notification p {
+  bottom: -4px !important;
+}
+
+/* inline codeblock */
+code {
+  font-size: 0.9em;
+  background-color: var(--bg-color5);
+  border-radius: 6px;
+  padding: 4px 4px 4px 4px;
+  margin: 0px 0px 0px 0px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* codeblock */
+.md-fences,
+.md-fences:active {
+  background-color: var(--bg-color5);
+  border-radius: 6px;
+  padding: 8px 4px 8px 4px !important;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.md-fences .code-tooltip {
+  display: block !important;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  background-color: var(--bg-color3);
+}
+
+.md-fences.md-focus .code-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.CodeMirror-lines {
+  padding-left: 4px;
+}
+
+/* selected text and cursor */
+.CodeMirror-selected,
+.CodeMirror-selectedtext {
+  background: var(--code-select-bg-color) !important;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+  border-left: 2px solid var(--code-cursor-color);
+  z-index: 3;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+  border-left: 3px solid var(--code-cursor-color);
+}
+
+/* highlight */
+.cm-s-inner .cm-property {
+  color: var(--code-blue-color) !important;
+}
+
+.cm-s-inner .cm-operator {
+  color: var(--code-cyan-color) !important;
+}
+
+.cm-s-inner .cm-keyword {
+  color: var(--code-purple-color) !important;
+}
+
+.cm-s-inner .cm-tag {
+  color: var(--code-red-color) !important;
+}
+
+.cm-s-inner .cm-attribute {
+  color: var(--code-orange-color) !important;
+}
+
+.cm-s-inner .cm-string {
+  color: var(--code-green-color) !important;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+  /*     color: var(--code-orange-color) !important; */
+  color: var(--code-grey-color) !important;
+  font-style: italic;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+  /*     color: var(--code-red-color) !important; */
+  color: var(--code-blue-color) !important;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+  color: var(--code-red-color) !important;
+}
+
+.cm-s-inner .cm-builtin {
+  /*     color: var(--code-blue-color) !important; */
+  color: var(--code-cyan-color) !important;
+}
+
+.cm-s-inner .cm-bracket {
+  color: var(--text-color1) !important;
+}
+
+.cm-s-inner .cm-number {
+  color: var(--code-orange-color) !important;
+}
+
+.cm-s-inner .cm-variable {
+  color: var(--text-color1) !important;
+}
+
+.cm-s-inner .cm-variable-2 {
+  /*     color: var(--code-blue-color) !important; */
+  color: var(--code-yellow-color) !important;
+}
+
+.cm-s-typora-default .cm-header,
+.cm-s-typora-default .cm-property {
+  color: var(--code-red-color) !important;
+}
+
+.cm-s-typora-default .cm-string {
+  /*     color: var(--code-blue-color); */
+  color: var(--code-purple-color);
+}
+
+.cm-s-typora-default .cm-atom {
+  color: var(--code-grey-color);
+  font-style: italic;
+}
+
+.cm-s-typora-default .cm-number {
+  color: var(--code-orange-color);
+  font-style: normal !important;
+}
+
+.cm-s-typora-default .cm-link {
+  color: var(--code-blue-color);
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+  background: var(--hover-bg-color1);
+}
+
+.cm-s-typora-default .cm-comment,
+.cm-s-typora-default .cm-code {
+  color: var(--code-purple-color);
+}
+
+.cm-s-typora-default .cm-tag {
+  /*     color: var(--code-red-color); */
+  color: var(--code-blue-color);
+}
+
+.cm-s-typora-default .cm-strong,
+.cm-s-typora-default .cm-em,
+.cm-s-typora-default .cm-del {
+  /*     color: var(--code-green-color); */
+  color: var(--code-orange-color);
+}
+
+.cm-s-typora-default .cm-block-start.cm-variable-2 {
+  /*     color: var(--code-orange-color); */
+  color: var(--code-red-color);
+}
+
+.cm-formatting-task .cm-formatting-task {
+  color: var(--code-red-color);
+}
+
+/* math formula tag */
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+  color: var(--code-blue-color);
+}
+
+/* inline codeblock in source mode */
+.cm-s-typora-default .cm-comment {
+  color: var(--code-green-color);
+}
+
+/* horizontal divider when language is markdown */
+.cm-s-inner .cm-hr {
+  color: var(--text-color1);
+}
+
+/* variable type when language is c/cpp */
+.cm-s-inner .cm-variable-3 {
+  color: var(--code-purple-color);
+}
+
+/* in pie chart and flowchart */
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+  color: var(--code-green-color);
+}
+
+/* unknown highlight keyword */
+.cm-s-inner .cm-link {
+  color: var(--code-blue-color);
+}
+
+.cm-s-inner .cm-negative {
+  color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+  color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+  color: #f50;
+}
+
+.CodeMirror-gutters {
+  border-right: none;
+}
+
+/* focus mode */
+.on-focus-mode .md-end-block:not(.md-focus) .md-toc-item {
+  opacity: 0.5;
+}
+
+.on-focus-mode #write h1:not(.md-focus):before {
+  opacity: 0.5;
+}
+
+.on-focus-mode #write h2:not(.md-focus):before {
+  opacity: 0.5;
+}
+
+.on-focus-mode #write h1:not(.md-focus) {
+  border-color: var(--text-color5);
+}
+
+.on-focus-mode #write h2:not(.md-focus) {
+  border-color: var(--text-color5);
+}
+
+.on-focus-mode #write h3:not(.md-focus) {
+  border-color: var(--text-color5);
+}
+
+/* YAML block */
+pre.md-meta-block,
+pre.md-meta-block:active {
+  background-color: var(--bg-color5);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* switch between different mode */
+#typora-source {
+  display: block !important;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.typora-sourceview-on #typora-source {
+  visibility: visible;
+  opacity: 1;
+}
+
+#typora-source .CodeMirror-lines {
+  max-width: 1200px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+#write {
+  display: block !important;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+  max-width: 1200px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.typora-sourceview-on #write {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* #md-searchpanel {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s !important;
+}
+
+.on-search-panel-open #md-searchpanel {
+    visibility: visible;
+    opacity: 1;
+} */
+
+.uni-preference-panel {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.show-preference-panel .uni-preference-panel {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* quick open menu */
+.typora-quick-open-item:hover {
+  background-color: var(--hover-bg-color1);
+  color: var(--hover-text-color);
+}
+
+/* insert table panel */
+.modal-content {
+  border: 0px;
+  border-radius: 6px;
+}
+
+.modal-content .btn-primary {
+  background-color: var(--hover-bg-color1);
+  color: var(--text-color1);
+  outline-width: 0px;
+}
+
+.modal-content .btn-primary:hover {
+  color: var(--hover-text-color);
+}
+
+.modal-content .form-control,
+.modal-content .form-control:focus {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-backdrop {
+  background-color: black;
+  opacity: 0.3 !important;
+}
+
+/* zoom  */
+#zoom-hint #zoom-hint-reset {
+  color: var(--text-color1);
+}
+
+#zoom-hint .zoom-hint-button:hover {
+  color: var(--hover-text-color) !important;
+}
+
+/* word count */
+#footer-word-count-info {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.ty-show-word-count #footer-word-count-info {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* spell check */
+#spell-check-panel {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.ty-show-spell-check #spell-check-panel {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* search result */
+.md-search-select {
+  border: 2px solid rgb(69, 125, 255);
+  box-sizing: content-box;
+  color: var(--text-color1) !important;
+}
+
+.md-search-hit {
+  background-color: var(--search-select-bg-color);
+}
+
+/* search panel message */
+#searchpanel-msg {
+  background-color: var(--bg-color2);
+  color: var(--text-color2);
+}
+
+.searchpanel-msg-btn:hover {
+  background-color: var(--hover-bg-color1);
+  color: var(--hover-text-color);
+}
+
+/* language selection for codeblock */
+.auto-suggest-container {
+  border: 0px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--bg-color2);
+}
+
+/* sidebar outline item hover and active */
+.outline-item:hover {
+  color: var(--hover-text-color);
+}
+
+.outline-label:hover {
+  text-decoration: none;
+}
+
+.pin-outline .outline-active {
+  color: var(--hover-text-color);
+}
+
+/* sidebar title hover */
+.info-panel-tab:hover {
+  color: var(--hover-text-color) !important;
+}
+
+/* active file in sidebar file menu treeview */
+.file-tree-node.active > .file-node-background {
+  background-color: var(--hover-bg-color1);
+}
+
+/* hover file in sidebar file menu treeview */
+.file-node-content:hover {
+  cursor: pointer;
+}
+
+/* saved button in megamenu */
+#m-saved:hover {
+  background-color: var(--bg-color2);
+  color: var(--text-color2);
+  cursor: default;
+}
+
+/* mermaid flowchart */
+.node rect,
+.node circle,
+.node ellipse,
+.node polygon,
+.node path {
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.edgePath .path {
+  stroke: var(--menu-divider-color) !important;
+}
+
+.label {
+  color: var(--text-color1) !important;
+}
+
+.edgeLabel rect {
+  fill: transparent !important;
+}
+
+.cluster rect {
+  fill: var(--bg-color5) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+/* mermaid sequence*/
+text.actor {
+  fill: var(--text-color1) !important;
+}
+
+.messageLine0,
+.messageLine1 {
+  stroke: var(--menu-divider-color) !important;
+}
+
+rect[class*="activation"] {
+  fill: var(--bg-color2) !important;
+}
+
+.actor-line {
+  stroke-width: 1px !important;
+}
+
+.labelBox {
+  stroke: rgb(150, 150, 150) !important;
+}
+
+.labelText {
+  fill: var(--text-color1) !important;
+}
+
+.loopText {
+  fill: var(--text-color1) !important;
+}
+
+.loopLine {
+  stroke: rgb(150, 150, 150) !important;
+}
+
+.note {
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.noteText {
+  fill: var(--text-color1) !important;
+}
+
+/* mermaid class */
+g.classGroup text {
+  fill: var(--text-color) !important;
+}
+
+g.classGroup rect {
+  stroke: var(--menu-divider-color) !important;
+  fill: var(--bg-color2) !important;
+}
+
+g.classGroup line {
+  stroke: var(--menu-divider-color) !important;
+}
+
+.classLabel .label {
+  fill: var(--text-color1) !important;
+}
+
+.relation {
+  stroke: var(--menu-divider-color) !important;
+}
+
+#compositionStart,
+#compositionEnd,
+#aggregationStart,
+#aggregationEnd,
+#dependencyStart,
+#dependencyStart,
+#extensionStart,
+#extensionEnd {
+  fill: var(--menu-divider-color) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.cardinality text {
+  fill: var(--text-color) !important;
+}
+
+/* mermaid state v1 */
+.stateGroup rect,
+.stateGroup line {
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.stateGroup text {
+  fill: var(--text-color) !important;
+}
+
+.stateGroup circle {
+  fill: var(--bg-color4) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.stateGroup .composit {
+  /*   fill: rgb(36,40,47) !important; */
+  fill: hsl(218, 13%, 17%) !important;
+}
+
+.stateGroup .alt-composit {
+  /*   fill: rgb(36,40,47) !important; */
+  fill: hsl(218, 13%, 16.5%) !important;
+}
+
+.state-note rect {
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.state-note text {
+  fill: var(--text-color) !important;
+}
+
+.stateLabel text {
+  fill: var(--text-color) !important;
+}
+
+#dependencyEnd {
+  fill: var(--menu-divider-color) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+/* mermaid state v2*/
+.state-start {
+  fill: var(--bg-color4) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.state-end {
+  stroke: var(--menu-divider-color) !important;
+  fill: var(--bg-color4) !important;
+}
+
+.divider {
+  stroke: var(--menu-divider-color) !important;
+  fill: var(--bg-color5) !important;
+  fill: hsl(218, 13%, 13.5%) !important;
+}
+
+.fork-join {
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.title-state {
+  fill: var(--bg-color2) !important;
+}
+
+.statediagram-cluster .outer {
+  /*   fill: var(--bg-color4) !important; */
+  stroke: var(--menu-divider-color) !important;
+}
+
+.statediagram-cluster .inner {
+  /*   fill: var(--bg-color2) !important; */
+  fill: hsl(218, 13%, 16.5%) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.statediagram-cluster-alt .inner {
+  /*   fill: var(--bg-color5) !important; */
+  fill: hsl(218, 13%, 16%) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.transition {
+  stroke: var(--menu-divider-color) !important;
+}
+
+#statediagram-barbEnd {
+  fill: var(--menu-divider-color) !important;
+}
+
+/* mermaid journey */
+.journey-section {
+  fill: var(--bg-color5) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.journey-section div {
+  color: var(--text-color) !important;
+}
+
+.task {
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
+  stroke-width: 1px !important;
+}
+
+.task div {
+  color: var(--text-color) !important;
+}
+
+#arrowhead {
+  fill: var(--menu-divider-color) !important;
+  stroke: var(--menu-divider-color) !important;
+  stroke-width: 0.3px !important;
+}
+
+pre[mermaid-type="journey"] line {
+  stroke: var(--menu-divider-color) !important;
+  stroke-width: 2px !important;
+}
+
+pre[mermaid-type="journey"] text {
+  fill: var(--text-color1) !important;
+}
+
+pre[mermaid-type="journey"] g path,
+pre[mermaid-type="journey"] g line {
+  fill: rgb(100, 104, 110) !important;
+  stroke: var(--text-color) !important;
+}
+
+.task-line {
+  stroke: var(--menu-divider-color) !important;
+}
+
+/* mermaid erDiagram */
+pre[mermaid-type="erDiagram"] rect {
+  fill: var(--bg-color2) !important;
+}
+
+pre[mermaid-type="erDiagram"] text {
+  fill: var(--text-color) !important;
+}
+
+pre[mermaid-type="erDiagram"] path {
+  stroke: var(--menu-divider-color) !important;
+}
+
+#ZERO_OR_ONE_START circle,
+#ZERO_OR_ONE_END circle,
+#ZERO_OR_MORE_START circle,
+#ZERO_OR_MORE_END circle {
+  fill: var(--bg-color) !important;
+}
+
+/* mermaid gantt */
+.titleText {
+  fill: var(--text-color1) !important;
+}
+
+.section0,
+.section2 {
+  fill: var(--table-thread-color) !important;
+}
+
+.section1,
+.section3 {
+  fill: var(--table-bg-color) !important;
+}
+
+.task0,
+.task1,
+.task2,
+.task3 {
+  fill: rgb(80, 84, 90) !important;
+  stroke: rgb(80, 84, 90) !important;
+}
+
+.taskText0,
+.taskText1,
+.taskText2,
+.taskText3 {
+  fill: var(--text-color2) !important;
+}
+
+.active0,
+.active1,
+.active2,
+.active3 {
+  fill: rgb(100, 104, 110) !important;
+  stroke: rgb(100, 104, 110) !important;
+}
+
+.activeText0,
+.activeText1,
+.activeText2,
+.activeText3 {
+  fill: var(--text-color2) !important;
+}
+
+.done0,
+.done1,
+.done2,
+.done3 {
+  fill: rgb(48, 51, 58) !important;
+  stroke: rgb(48, 51, 58) !important;
+}
+
+.crit0,
+.crit1,
+.crit2,
+.crit3 {
+  fill: rgb(150, 150, 150) !important;
+  stroke: var(--text-color1) !important;
+}
+
+.activeCrit0,
+.activeCrit1,
+.activeCrit2,
+.activeCrit3 {
+  fill: rgb(100, 104, 110) !important;
+  stroke: var(--text-color1) !important;
+}
+
+.doneCrit0,
+.doneCrit1,
+.doneCrit2,
+.doneCrit3 {
+  fill: rgb(48, 51, 58) !important;
+  stroke: var(--text-color1) !important;
+}
+
+.taskTextOutside0,
+.taskTextOutside2,
+.taskTextOutside1,
+.taskTextOutside3 {
+  fill: var(--text-color1) !important;
+}
+
+.grid text {
+  fill: white !important;
+}
+
+.today {
+  stroke: var(--text-color1) !important;
+}
+
+/* mermaid pie chart */
+g.legend > text {
+  fill: var(--text-color1) !important;
+}
+
+g.legend > rect {
+  stroke: var(--bg-color) !important;
+}
+
+g > path {
+  stroke: var(--bg-color) !important;
+}
+
+g > text.slice {
+  fill: var(--bg-color) !important;
+}
+
+/* flow diagram */
+.md-fences[lang="flow"] .md-diagram-panel-preview rect {
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
+  stroke-width: 1.2 !important;
+}
+
+.md-fences[lang="flow"] .md-diagram-panel-preview path {
+  stroke: var(--menu-divider-color) !important;
+  stroke-width: 1.2 !important;
+}
+
+.md-fences[lang="flow"] #cond {
+  fill: var(--bg-color2) !important;
+}
+
+/* sequence diagram */
+.md-fences[lang="sequence"] .md-diagram-panel-preview rect:not([fill="none"]) {
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
+  stroke-width: 1.2 !important;
+}
+
+.md-fences[lang="sequence"] .md-diagram-panel-preview path {
+  fill: var(--menu-divider-color) !important;
+  stroke: var(--menu-divider-color) !important;
+  stroke-width: 1.2 !important;
+}
+
+.md-fences[lang="sequence"] text,
+.md-fences[lang="flow"] text {
+  font-family: "Consolas" !important;
+}
+
+/* remove box shadow when not edit graph */
+.md-fences[lang="sequence"]:not(.md-focus),
+.md-fences[lang="mermaid"]:not(.md-focus),
+.md-fences[lang="flow"]:not(.md-focus) {
+  box-shadow: none;
+}
+
+/* remove border when edit graph */
+.md-diagram-panel {
+  border: none !important;
+}
+
+kbd {
+  background: var(--bg-color5);
+  color: var(--text-color1);
+  font-family: "Lucida Console";
+  border-color: var(--menu-divider-color);
+  box-shadow: 0 2px 0 var(--menu-divider-color);
+}
+
+ :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>Pandoc</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='pandoc-document-converter'><span>Pandoc document converter</span></h1><h1 id='introduction'><span>Introduction</span></h1><p><a href='www.pandoc.org'><span>Pandoc</span></a><span> converts files from one markup format into another. In the pandoc web page it is defined as the swiss-army knife of document converting.</span></p><h1 id='what-pandoc-is-capable-of'><span>What Pandoc is capable of? </span></h1><p><span>Pandoc understands a lot of markdown syntax extensions, including:</span></p><ul><li><span>document metadata (title, author, date)</span></li><li><span>footnotes</span></li><li><span>tables</span></li><li><span>definition lists</span></li><li><span>superscript and subscript</span></li><li><span>strikeouts </span></li><li><span>enhanced ordered lists </span></li><li><span>running example lists</span></li><li><span>delimited code blocks with syntax highlighting</span></li><li><span>smart quotes, dashes, and ellipses</span></li><li><span>markdown inside HTML blocks; and inline LaTeX.</span></li></ul><p><a href='https://www.latex-project.org/'><span>LaTeX</span></a><span> math (and even macros) can be used in markdown documents. Several different methods of rendering math in HTML are provided, including </span><a href='https://www.mathjax.org/'><span>MathJax</span></a><span> and translation to </span><a href='https://www.w3.org/TR/MathML3/'><span>MathML</span></a><span>. LaTeX math is converted (as needed by the output format) to </span><a href='https://home.unicode.org/'><span>unicode</span></a><span>, native Word equation objects, MathML, or roff eqn.</span></p><p><span>Pandoc includes a powerful system for automatic citations and bibliographies. This means that you can write a citation like </span><code>[see @doe99, pp. 33-35; also @smith04, ch. 1]</code><span> and pandoc will convert it into a properly formatted citation using any of hundreds of CSL styles (including footnote styles, numerical styles, and author-date styles), and add a properly formatted bibliography at the end of the document. The bibliographic data may be in </span><a href='http://www.bibtex.org/'><span>BibTeX</span></a><span>, </span><a href='https://www.ctan.org/pkg/biblatex'><span>BibLaTeX</span></a><span>, </span><a href='https://docs.cloudcite.net/csl'><span>CSL JSON</span></a><span>, or </span><a href='https://github.com/publicus/YAML-CSL'><span>CSL YAML</span></a><span> format. Citations work in every output format.</span></p><p><span>There are many ways to customize pandoc to fit your needs, including a template system and a powerful system for writing filters.</span></p><p><span>Pandoc includes a </span><a href='https://www.haskell.org/'><span>Haskell</span></a><span> library and a standalone command-line program. The library includes separate modules for each input and output format, so adding a new input or output format just requires adding a new module.</span></p><p><span>Pandoc is free software, released under the GPL. Copyright 2006–2020 </span><a href='https://www.johnmacfarlane.net/'><span>John MacFarlane</span></a></p><h2 id='installing-pandoc'><span>Installing pandoc</span></h2><p><span>The simplest way to get the latest pandoc release is to use the installer. For alternative ways to install pandoc, see below under the heading for your operating system.</span></p><h3 id='installing-on-windows'><span>Installing on Windows</span></h3><p><span>There is a package installer at pandoc’s download page. This will install pandoc, replacing older versions, and update your path to include the directory where pandoc’s binaries are installed. It is also obtain a zip file that contains pandoc’s binaries and documentation. Simply unzip this file and move the binaries to a directory of your choice.</span></p><p><span>Alternatively, you can install pandoc using Chocolatey:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">choco install pandoc</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><a href='https://chocolatey.org/'><span>Chocolatey</span></a><span> can also install other software that integrates with Pandoc, e.g. rsvg-convert (from librsvg, covering formats without SVG support), Python (to use Pandoc filters), and MiKTeX (to typeset PDFs with LaTeX):</span></p><h3 id='installing-on-mac-osx'><span>Installing on Mac OSX</span></h3><p><span>There is a package installer at pandoc’s download page. If you later want to uninstall the package, you can do so by downloading this script and running it with perl </span><code>uninstall-pandoc.pl</code><span>.</span></p><p><span>Alternatively, you can install pandoc using </span><a href='https://brew.sh/'><span>Homebrew</span></a><span>:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">brew install pandoc</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>Homebrew, as in Chocolatey can also install other software that integrates with Pandoc</span><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup><span>. </span></p><p><span>It aslo exists a zip file containing the binaries and man pages, for those who prefer not to use the installer. Simply unzip the file and move the binaries and man pages to whatever directory you like.</span></p><p><span>By default, Pandoc creates PDFs using LaTeX which means that should be installed on your system. If you are a Latex user (and probably have installed </span><a href='https://www.tug.org/mactex/'><span>MacTeX</span></a><span> it works inmediately. But that Mactex distribution uses four gigabytes of disk space, so if you need Latex only for conversion pouposes, </span><a href='https://www.tug.org/mactex/morepackages.html'><span>BasicTeX</span></a><span> or </span><a href='https://github.com/yihui/tinytex/'><span>TinyTeX</span></a><span> are good choices</span></p><h3 id='installing-on-linux-distributions'><span>Installing on Linux distributions</span></h3><p><span>Check whether the pandoc version in your package manager is not outdated. Pandoc is in the </span><a href='https://www.debian.org/index.es.html'><span>Debian</span></a><span>, </span><a href='https://ubuntu.com/'><span>Ubuntu</span></a><span>, </span><a href='http://www.slackware.com/'><span>Slackware</span></a><span>, </span><a href='https://archlinux.org/'><span>Arch</span></a><span>, </span><a href='https://getfedora.org/'><span>Fedora</span></a><span>, </span><a href='https://nixos.org/'><span>NiXOS</span></a><span>, </span><a href='https://www.opensuse.org/'><span>openSUSE</span></a><span>, </span><a href='https://www.gentoo.org/'><span>Gentoo</span></a><span> and </span><a href='https://voidlinux.org/download/'><span>Void</span></a><span> repositories.</span></p><p><span>To get the latest release, the is a binary package for </span><code>amd64</code><span> architecture on the download page.</span></p><p><span>The executable is statically linked and has no dynamic dependencies or dependencies on external data files</span><sup class='md-footnote'><a href='#dfref-footnote-2' name='ref-footnote-2'>2</a></sup><span>. </span></p><p><span>Both a tarball and a </span><code>deb</code><span> installer are provided. </span></p><p><span>To install the deb:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">sudo</span> dpkg <span class="cm-attribute">-i</span> <span class="cm-def">$DEB</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>where $DEB is the path to the downloaded deb. This will install the pandoc executable and man page.</span></p><p><span>To install in a RPM-based distro, you may be able to install the </span><code>deb</code><span> from our download page using </span><a href='https://pkgs.org/download/alien'><span>alien</span></a><span>.</span></p><p><span>On any distro, you may install from the tarball into </span><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="26.107ex" height="2.671ex" viewBox="0 -835.3 11240.7 1149.8" role="img" focusable="false" style="vertical-align: -0.73ex;"><defs><path stroke-width="0" id="E2-MJMATHI-44" d="M287 628Q287 635 230 637Q207 637 200 638T193 647Q193 655 197 667T204 682Q206 683 403 683Q570 682 590 682T630 676Q702 659 752 597T803 431Q803 275 696 151T444 3L430 1L236 0H125H72Q48 0 41 2T33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM703 469Q703 507 692 537T666 584T629 613T590 629T555 636Q553 636 541 636T512 636T479 637H436Q392 637 386 627Q384 623 313 339T242 52Q242 48 253 48T330 47Q335 47 349 47T373 46Q499 46 581 128Q617 164 640 212T683 339T703 469Z"></path><path stroke-width="0" id="E2-MJMATHI-45" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path><path stroke-width="0" id="E2-MJMATHI-53" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path><path stroke-width="0" id="E2-MJMATHI-54" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path><path stroke-width="0" id="E2-MJMAIN-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path stroke-width="0" id="E2-MJMATHI-73" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path><path stroke-width="0" id="E2-MJMATHI-61" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path><path stroke-width="0" id="E2-MJMATHI-79" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path><path stroke-width="0" id="E2-MJMAIN-2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path><path stroke-width="0" id="E2-MJMAIN-2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path><path stroke-width="0" id="E2-MJMATHI-75" d="M21 287Q21 295 30 318T55 370T99 420T158 442Q204 442 227 417T250 358Q250 340 216 246T182 105Q182 62 196 45T238 27T291 44T328 78L339 95Q341 99 377 247Q407 367 413 387T427 416Q444 431 463 431Q480 431 488 421T496 402L420 84Q419 79 419 68Q419 43 426 35T447 26Q469 29 482 57T512 145Q514 153 532 153Q551 153 551 144Q550 139 549 130T540 98T523 55T498 17T462 -8Q454 -10 438 -10Q372 -10 347 46Q345 45 336 36T318 21T296 6T267 -6T233 -11Q189 -11 155 7Q103 38 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path><path stroke-width="0" id="E2-MJMATHI-72" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path><path stroke-width="0" id="E2-MJMATHI-6C" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"></path><path stroke-width="0" id="E2-MJMATHI-6F" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path><path stroke-width="0" id="E2-MJMATHI-63" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E2-MJMATHI-44" x="0" y="0"></use><use xlink:href="#E2-MJMATHI-45" x="828" y="0"></use><use xlink:href="#E2-MJMATHI-53" x="1592" y="0"></use><use xlink:href="#E2-MJMATHI-54" x="2237" y="0"></use><use xlink:href="#E2-MJMAIN-28" x="2941" y="0"></use><use xlink:href="#E2-MJMATHI-73" x="3330" y="0"></use><use xlink:href="#E2-MJMATHI-61" x="3799" y="0"></use><use xlink:href="#E2-MJMATHI-79" x="4328" y="0"></use><use xlink:href="#E2-MJMAIN-2C" x="4825" y="0"></use><use xlink:href="#E2-MJMAIN-2F" x="5269" y="0"></use><use xlink:href="#E2-MJMATHI-75" x="5769" y="0"></use><use xlink:href="#E2-MJMATHI-73" x="6341" y="0"></use><use xlink:href="#E2-MJMATHI-72" x="6810" y="0"></use><use xlink:href="#E2-MJMAIN-2F" x="7261" y="0"></use><use xlink:href="#E2-MJMATHI-6C" x="7761" y="0"></use><use xlink:href="#E2-MJMATHI-6F" x="8059" y="0"></use><use xlink:href="#E2-MJMATHI-63" x="8544" y="0"></use><use xlink:href="#E2-MJMATHI-61" x="8977" y="0"></use><use xlink:href="#E2-MJMATHI-6C" x="9506" y="0"></use><use xlink:href="#E2-MJMAIN-2F" x="9804" y="0"></use><use xlink:href="#E2-MJMATHI-6F" x="10304" y="0"></use><use xlink:href="#E2-MJMATHI-72" x="10789" y="0"></use></g></svg></span><script type="math/tex">DEST (say, /usr/local/ or </script><span>HOME/.local) by doing</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">tar xvzf <span class="cm-def">$TGZ</span> <span class="cm-attribute">--strip-components</span> <span class="cm-number">1</span> <span class="cm-attribute">-C</span> <span class="cm-def">$DEST</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>where $TGZ is the path to the downloaded zipped tarball. </span></p><p><span>For PDF output, you’ll need LaTeX. We recommend installing TeX Live via your package manager. (On Debian/Ubuntu, apt-get install texlive.)</span></p><h3 id='installing-on-chrome-os'><span>Installing on Chrome OS</span></h3><p><span>On </span><a href='https://chromeenterprise.google/os/'><span>Chrome OS</span></a><span>, pandoc can be installed using the chromebrew package manager with the command:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">crew install pandoc</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>This will automatically build and configure pandoc for the specific device you are using.</span></p><p><span>Installing on BSD</span></p><p><span>Pandoc is in the </span><a href='https://netbsd.org/'><span>NetBSD</span></a><span> and </span><a href='https://www.freebsd.org/'><span>FreeBSD</span></a><span> ports repositories.</span></p><h3 id='docker'><span>Docker</span></h3><p><span>The official Docker images for pandoc can be found at </span><a href='https://github.com/pandoc/dockerfiles' target='_blank' class='url'>https://github.com/pandoc/dockerfiles</a><span> and at dockerhub.</span></p><p><span>The pandoc/core image contains pandoc.</span></p><p><span>The pandoc/latex image also contains the minimal LaTeX installation needed to produce PDFs using pandoc.</span></p><p><span>To run pandoc using Docker, converting README.md to README.pdf:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">docker run <span class="cm-attribute">--rm</span> <span class="cm-attribute">--volume</span> <span class="cm-string">"`pwd`:/data"</span> <span class="cm-attribute">--user</span> <span class="cm-quote">`id -u`</span>:<span class="cm-quote">`id -g`</span> pandoc/latex README.md <span class="cm-attribute">-o</span> README.pdf</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 44px;"></div><div class="CodeMirror-gutters" style="display: none; height: 44px;"></div></div></div></pre><h3 id='github-actions'><span>GitHub Actions</span></h3><p><span>Pandoc can be run through GitHub Actions. For some examples, see </span><a href='https://github.com/pandoc/pandoc-action-example' target='_blank' class='url'>https://github.com/pandoc/pandoc-action-example</a><span>.</span></p><h3 id='compiling-from-source'><span>Compiling from source</span></h3><p><span>If for some reason a binary package is not available for your platform, or if you want to hack on pandoc or use a non-released version, you can install from source.</span></p><p><span>You can also install from source, using the instructions to Compiling from source</span><sup class='md-footnote'><a href='#dfref-footnote-3' name='ref-footnote-3'>3</a></sup><span>. </span></p><h2 id='using-pandoc'><span>Using Pandoc</span></h2><p><span>Once installed following the instructions for your platform you can use it in a terminal or command window depending on your OS.</span></p><h3 id='open-a-terminal'><span>Open a terminal</span></h3><p><span>Pandoc is a command-line tool. There is no graphic user interface. So, to use it, you’ll need to open a terminal window:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">* On OS X, the Terminal application can be found in /Applications/Utilities. Open a Finder window and go to Applications, then Utilities. Then double click on Terminal. (Or, click the spotlight icon in the upper right hand corner of your screen and type Terminal – you should see Terminal under Applications.)</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">* On Windows, you can use either the classic command prompt or the more modern PowerShell terminal. If you use Windows in desktop mode, run the cmd or powershell command from the Start menu. If you use the Windows 8 start screen instead, simply type cmd or powershell, and then run either the “Command Prompt” or “Windows Powershell” application. If you are using cmd, type chcp 65001 before using pandoc, to set the encoding to UTF-8.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">* On Linux, there are many possible configurations, depending on what desktop environment you’re using:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  * In Unity, use the search function on the Dash, and search for Terminal. Or, use the keyboard shortcut Ctrl-Alt-T.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  In Gnome, go to Applications, then Accessories, and select Terminal, or use Ctrl-Alt-T.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  In XFCE, go to Applications, then System, then Terminal, or use Super-T.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  In KDE, go to KMenu, then System, then Terminal Program (Konsole).</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 396px;"></div><div class="CodeMirror-gutters" style="display: none; height: 396px;"></div></div></div></pre><p><span>You should now see a rectangle with a “prompt” (possibly just a symbol like %, but probably including more information, such as your username and directory), and a blinking cursor.</span></p><p><span>Let’s verify that pandoc is installed. Type a command, e.g.:</span></p><p><span>pandoc --version</span>
+<span>and hit enter. You should see a message telling you which version of pandoc is installed, and giving you some additional information.</span></p><h3 id='changing-directories'><span>Changing directories</span></h3><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pwd</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>on Linux or OSX, or</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">echo</span> %cd%</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>on Windows, and hit enter. </span></p><p><span>Your terminal should print your current working directory. (Guess what pwd stands for?) This should be your home directory.</span></p><p><span>Let’s navigate now to our Documents directory: type</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">cd</span> Documents</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>and hit enter. Now type</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pwd</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>(or echo %cd% on Windows) again. You should be in the Documents subdirectory of your home directory. To go back to your home directory, you could type</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">cd</span> ..</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>The </span><code>..</code><span> means “one level up.”</span></p><p><span>Go back to your Documents directory if you’re not there already. Let’s try creating a subdirectory called pandoc-test:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">mkdir</span> pandoc-test</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>Now change to the pandoc-test directory:</span></p><p><span>cd pandoc-test</span>
+<span>If the prompt doesn’t tell you what directory you’re in, you can confirm that you’re there by doing</span></p><p><span>pwd</span>
+<span>(or echo %cd%) again.</span></p><p><span>OK, that’s all you need to know for now about using the terminal. But here’s a secret that will save you a lot of typing. You can always type the up-arrow key to go back through your history of commands. So if you want to use a command you typed earlier, you don’t need to type it again: just use up-arrow until it comes up. Try this. (You can use down-arrow as well, to go the other direction.) Once you have the command, you can also use the left and right arrows and the backspace/delete key to edit it.</span></p><p><span>Most terminals also support tab completion of directories and filenames. To try this, let’s first go back up to our Documents directory:</span></p><p><span>cd ..</span>
+<span>Now, type</span></p><p><span>cd pandoc-</span>
+<span>and hit the tab key instead of enter. Your terminal should fill in the rest (test), and then you can hit enter.</span></p><p><span>To review:</span></p><p><span>pwd (or echo %cd% on Windows) to see what the current working directory is.</span>
+<span>cd foo to change to the foo subdirectory of your working directory.</span>
+<span>cd .. to move up to the parent of the working directory.</span>
+<span>mkdir foo to create a subdirectory called foo in the working directory.</span>
+<span>up-arrow to go back through your command history.</span>
+<span>tab to complete directories and file names.</span></p><h3 id='using-pandoc-as-a-filter'><span>Using pandoc as a filter</span></h3><p><span>Type</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pandoc</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>and hit enter. You should see the cursor just sitting there, waiting for you to type something. Type this:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="html"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Hello *pandoc*!</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">- one</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">- two</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 88px;"></div><div class="CodeMirror-gutters" style="display: none; height: 88px;"></div></div></div></pre><p><span>When you’re finished (the cursor should be at the beginning of the line), type Ctrl-D on OS X or Linux, or Ctrl-Z followed by Enter on Windows. You should now see your text converted to HTML!</span></p><p>Hello <em>pandoc</em>!</p>
+<ul>
+<li>one</li>
+<li>two</li>
+</ul><p><span>What just happened? When pandoc is invoked without specifying any input files, it operates as a “filter,” taking input from the terminal and sending its output back to the terminal. You can use this feature to play around with pandoc.</span></p><p><span>By default, input is interpreted as pandoc markdown, and output is HTML. But we can change that. Let’s try converting from HTML to markdown:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pandoc <span class="cm-attribute">-f</span> html <span class="cm-attribute">-t</span> markdown</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>Now type:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="html"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Hello <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">em</span><span class="cm-tag cm-bracket">&gt;</span>pandoc<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">em</span><span class="cm-tag cm-bracket">&gt;</span>!<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>and hit Ctrl-D (or Ctrl-Z followed by Enter on Windows). You should see:</span></p><p><span>Hello </span><em><span>pandoc</span></em><span>!</span></p><p><span>Now try converting something from markdown to LaTeX. What command do you think you should use?</span></p><h3 id='text-editor-basics'><span>Text editor basics</span></h3><p><span>You’ll probably want to use pandoc to convert a file, not to read text from the terminal. That’s easy, but first we need to create a text file in our pandoc-test subdirectory.</span></p><p><span>Important: To create a text file, you’ll need to use a text editor, not a word processor like Microsoft Word. On Windows, you can use Notepad (in Accessories). On OS X, you can use TextEdit (in Applications). On Linux, different platforms come with different text editors: Gnome has GEdit, and KDE has Kate.</span></p><p><span>Start up your text editor. Type the following:</span></p><p><code>---</code></p><p><span>title: Test</span></p><p><code>---</code></p><h1 id='test'><span>Test!</span></h1><p><span>This is a test of </span><em><span>pandoc</span></em><span>.</span></p><ul><li><span>list one</span></li><li><span>list two</span></li></ul><p><span>Now save your file as test1.md in the directory Documents/pandoc-test. If you use plain text a lot, you’ll want a better editor than Notepad or TextEdit. You might want to look at Sublime Text or (if you’re willing to put in some time learning an unfamiliar interface) Vim or Emacs.</span></p><h3 id='converting-a-file'><span>Converting a file</span></h3><p><span>Go back to your terminal. We should still be in the Documents/pandoc-test directory. Verify that with pwd.</span></p><p><span>Now type</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">ls</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>or </span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">dir</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>if you’re on Windows). This will list the files in the current directory. You should see the file you created, </span><code>test1.md</code><span>.</span></p><p><span>To convert it to HTML, use this command:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pandoc test1.md <span class="cm-attribute">-f</span> markdown <span class="cm-attribute">-t</span> html <span class="cm-attribute">-s</span> <span class="cm-attribute">-o</span> test1.html</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>The filename </span><code>test1.md</code><span> tells pandoc which file to convert. The </span><code>-s</code><span> option says to create a “standalone” file, with a header and footer, not just a fragment. And the </span><code>-o test1</code><span>.html says to put the output in the file </span><code>test1.html</code><span>. Note that we could have omitted </span><code>-f markdown</code><span> and </span><code>-t html</code><span>, since the default is to convert from markdown to HTML.</span></p><p><span>Check that the file was created by typing ls again. You should see </span><code>test1.html</code><span>. Now open this in a browser. On OS X, you can type</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">open test1.html</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>On Windows, type</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">.\test1.html</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>You should see a browser window with your document.</span></p><p><span>To create a LaTeX document, you just need to change the </span><code>command</code><span> slightly:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pandoc test1.md <span class="cm-attribute">-f</span> markdown <span class="cm-attribute">-t</span> latex <span class="cm-attribute">-s</span> <span class="cm-attribute">-o</span> test1.tex</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>Try opening test1.tex in your text editor.</span></p><p><span>Pandoc can often figure out the input and output formats from the filename extensions. So, you could have just used:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pandoc test1.md <span class="cm-attribute">-s</span> <span class="cm-attribute">-o</span> test1.tex</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>Pandoc knows you’re trying to create a LaTeX document, because of the .tex extension.</span></p><p><span>Now try creating a Word document (with extension docx).</span></p><p><span>If you want to create a PDF, you’ll need to have LaTeX installed. (See MacTeX on OS X, MiKTeX on Windows, or install the texlive package on Linux.) Then do:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pandoc test1.md <span class="cm-attribute">-s</span> <span class="cm-attribute">-o</span> test1.pdf</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><h3 id='command-line-options'><span>Command-line options</span></h3><p><span>You now know the basics. Pandoc has a lot of options. At this point you can start to learn more about them by reading the User’s Guide.</span></p><p><span>Here’s an example. The </span><code>--mathml</code><span> option causes pandoc to convert TeX math into MathML. Type</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pandoc <span class="cm-attribute">--mathml</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>then enter this text, followed by Ctrl-D (Ctrl-Z followed by Enter on Windows):</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">$x = y^2$</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>Now try the same thing without </span><code>--mathml</code><span>. See the difference in output?</span></p><p><span>If you forget an option, or forget which formats are supported, you can always do</span></p><p><span>pandoc --help</span>
+<span>to get a list of all the supported options.</span></p><p><span>On OS X or Linux systems, you can also do</span></p><p><span>man pandoc</span>
+<span>to get the pandoc manual page. All of this information is also in the User’s Guide.</span></p><p><span>If you get stuck, you can always ask questions on the pandoc-discuss mailing list. But be sure to check the FAQs first, and search through the mailing list to see if your question has been answered before.</span></p><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> <span>On unsupported versions of macOS (more than three releases old), Homebrew installs from source, which takes additional time and disk space for the ghc compiler and dependent Haskell libraries.</span> <a name='dfref-footnote-1' href='#ref-footnote-1' title='volver ao documento' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>2</span> <span>Because of the static linking, the pandoc binary from this package cannot use lua filters that require external lua modules written in C.</span> <a name='dfref-footnote-2' href='#ref-footnote-2' title='volver ao documento' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>3</span> <span>Most distros have the Haskell platform in their package repositories. For example, on Debian/Ubuntu, you can install it with apt-get install haskell-platform.</span> <a name='dfref-footnote-3' href='#ref-footnote-3' title='volver ao documento' class='reversefootnote' >↩</a></div></div></div></div>
+</body>
+</html>
