@@ -1,7 +1,3 @@
----
-marp: true
----
-
 # Creating Quizzes in Moodle
 
 ```
@@ -23,28 +19,27 @@ The Quiz is an activity that can meet many teaching needs, from simple, multiple
 
 When creating a Quiz you can either make the questions first and add them to the Quiz, or add a Quiz activity (as below) and create the questions as you go along.
 
-The logical way of use is to create (and) manage questions in the _Question bak_ (_banco de presguntas_)  
+The logical way of use is to create (and) manage questions in the _Question bak_ (_banco de preguntas_)  
 
 ### Features of the Question bank
 
-Quizzes can be configured to allow multiple attempts. Each attempt at a question is automatically marked, and the teacher can choose whether to give feedback and/or show the correct answers.
+Quizzes can be configured to allow multiple attempts. Each attempt at a question is automatically marked, and you can choose whether to give feedback and/or show the correct answers.
 There are many ways to use a quiz.
 
-* Feedback about performance and self-assessment are important parts of a learning environment. There are several ways to give feedback to students: on each question or overall. The quiz module can display feedback and scores at different times during the quiz, using the review options in the Quiz settings.
-* A wide variety of Quiz reports (in addition to Grades) are available for use by the teacher. Quiz reports not only can focus on a single student's attempt to answer each question, but also can perform a robust item analysis of a question's validity based upon aggregated student responses.
-* A single quiz can automatically select random and/or specific questions from different categories of questions.
-* There are different options for scoring (marks-grades) individual questions in a specific quiz, grading attempts for a quiz and each question type.
-* The quiz settings allow different display methods. They can randomize the questions for each student and or randomize the answers for each student.
-* The teacher can determine the number of questions on each page of questions the student sees. The teacher can change the position of any question in the quiz. It is possible to put a label with information any place between questions.
-* The teacher can choose how questions behave during the quiz. It can be like a classic test, where the student gets no feedback while attempting the test, only later. Alternatively, Moodle can reveal the grades and/or feedback to the student during the quiz, and perhaps even give them another chance to answer the question (for fewer marks) having read the feedback.
-
-## Creating a test-exam-quiz or whatever you mean in Moodle
-
-To create a new quiz in Moodle you need to perform the following steps:
-
-| Step | Action |
-| 1.   | Make the QUESTION BANK, which includes:<br>    Create CATEGORIES to classify the questions.<br>    Create the QUESTIONS for eache category. |
-| 2.   | Add QUESTIONS (from our question bank) to the quiz and set the score. |
+* Feedback about performance and self-assessment are important parts of a learning environment. There are several ways to give feedback to students: 
+  * On each question 
+  * Overall feedback
+* The quiz module can display feedback and scores at different times during the quiz (using the _review_ option in the _Quiz_ settings).
+* A wide variety of _Quiz reports_ (in addition to Grades) are available for your use. _Quiz reports_ not only can focus on a single student's attempt, but also can perform a robust item analysis of a question's aggregated responses.
+* A single quiz can automatically marked as _random_ and/or _specific questions_ from different categories.
+* There are different options for scoring individual questions in a specific quiz, grading attempts for a quiz and question type.
+* The quiz settings allow different display methods:
+  * Randomize questions for each student
+  * Randomize answers for each student.
+* You can determine the number of questions on each page of questions an change the position of any question in the quiz. It is possible to write a label with information anywhere between questions.
+* You can choose how questions behave during the quiz:
+  * Like a classic test, where the student gets no feedback while attempting the test, only later.
+  * Alternatively, Moodle can reveal the grades and/or feedback to the student during the quiz, and perhaps even give them another chance to answer the question (for fewer marks) having read the feedback.
 
 ## The question bank
 
@@ -68,9 +63,9 @@ To do this:
 
 | Step | Actions                                                      |
 | ---- | :----------------------------------------------------------- |
-| 1.   | On your course page, select the **Course Management** (black gear icon, top right), a *Course Management* panel will open. |
+| 1.   | On your course page, select the _Course Management_ (black gear icon, top right), a *Course Management* panel will open. |
 |      |                                                              |
-| 2.   | On the panel, under *Quiz Questions*, click **Question bank**. The *Question bank* page opens to the *Default category* for the course you are in, and on this page you will also see Questions, Categories, Import and Export tabs. |
+| 2.   | On the panel, under *Quiz Questions*, click _Question bank_. The _Question bank_ page opens to the *Default category* for the course you are in, and on this page you will also see Questions, Categories, Import and Export tabs. |
 | 3.   | To add a new category, select the **Categories** tab. The *Edit categories* page will open. |
 | 4.   | On the *Edit categories* page, under *Add category*, define the new category that you want to add: |
 |      | **Parent Category** (Optional)  Select a:<BR>   **Parent category** for the new category. (By default, the new category will be added as a sub-category<BR>   of   the course's default category.).<BR>   **Name** (Required)  In the *Name* field, enter a name for the new category.<BR>   **Category info** (Optional)  Enter a description for the new category in the *Category info* field. |
@@ -705,29 +700,20 @@ perform different actions on the questions:
 - The trash can to remove the exam question
 - The qualification of the question within the exam
 
-`` `
-Add the maximum exam grade and don’t forget
-press the "Save" button to store
+Add the maximum exam grade and don’t forget press the "Save" button to store
 exam settings.
 `` `
 
-#### Examination of random questions
+#### Exame from random questions
 
-Moodle also allows you to create a quiz with random questions,
-selecting a random number of questions from one or more
-categories. In this way, each student will have a combination of
-different questions.
+Moodle also allows you to create a quiz with random questions, selecting a random number of questions from one or more categories. In this way, each student will have a combination of different questions.
 
-* Guide to creating questionnaires in MooVi *
+To create a random test, select from the drop-down that displays the "Random Question" option in "Edit Test":
 
-To create a random test, select from the drop-down that
-displays the "Random Question" option in "Edit Test":
-
-A window will open in which you can select the category of your bank
-questions and you only need to indicate the “Number of random questions” that
-you want them to be included in that category. Click on the button "Add one
-he asks at random.
-
+*  window will open in which you can select the category of your bank
+  questions and you only need to indicate the “Number of random questions” that
+  you want them to be included in that category. Click on the button "Add one
+  he asks at random.
 
 At the end, you can check how your test was created.
 Select the "Preview" option from the

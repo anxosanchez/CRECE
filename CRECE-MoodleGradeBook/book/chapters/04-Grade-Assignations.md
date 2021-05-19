@@ -129,7 +129,8 @@ A teacher can add grades and feedback into a `.csv` file while they are offline,
 
 This option enables us to customize how the grading table is viewed as well as provide some quick grading options. You can customize how you view the assignment grading area.Options are:
 
--  _ Assignments per page_ how many rows are shown per page.
+- _Assignments per page_ how many rows are shown per page.
+
 - _Filter_ drop-down list on the grading table that only shows you the assignments that we need to consider:
   ° _Not submitted_ 
   ° _Submitted_ 
@@ -163,61 +164,34 @@ Much of this information about _Submission status_ is the same as previous, but 
 - We will need to make our feedback stand out from the student's original text, using the text editor available at _Feedback comments_ box.
 - Click on _Save changes_ to submit the feedback and grade to the Gradebook and inform the student.
 
-### Grading an with outcomes
+### Grading with outcomes
 
-After viewing the assignment and clicking on **View/grade all assignments** , we will
-see the assignment grading table. As this assignment has enabled **File submissions**
-and **Online text** submissions, both of these columns appear in the table. As we have
-added outcomes to this assignment, there is an additional column at the end of the
-grading table, which shows you the outcomes that are used.
+The assignment grading table shows added outcomes to one assignment (if we have chosen that option). An additional column at the end of the grading table shows the outcomes. Otherwise _No outcome_ appears.
 
-Note that currently, the text **No outcome** appears with each outcome. This shows
-you that the assignments haven't been graded yet.
+* To grade the outcomes, we need to click on the _grade_ icon in the _Grade_ column.
 
-*Assigning Grades*
+* _Submission status_  enables the access to the file and online text submitted by the student. 
+* _Grade_ is similar to previous.
+* Final grade will be awarded when we enter a numerical value in the _Grade out of 100_ option in the _Grade_ box.
 
-We will use the individual grading screen to grade the outcomes, so we need to
-click on the **grade** icon in the **Grade** column next to the student whose work we
-want to mark.
+* There are additional items to grade like _Evidence provided_ and _Criteria 1 met_.  To grade each outcome, click the drop-down list.
 
-Once we're on the individual grading screen, the **Submission status** area enables us
-to access the file and online text submitted by the student. The **Grade** section is very
-similar to the one used previously. A final grade will be awarded and we can enter a
-numerical value in the **Grade out of 100** option in the **Grade** box.
+* You ca manually reopen an assignment in order to enable resubmission (_Attempt settings_). Change _Allow another attempt_ option to _Yes_.
 
-However, there are additional items to grade now: **Evidence provided** and **Criteria 1
-met**. Next to the name of each outcome is a drop-down list that provides us with the
-scale chosen when setting up the outcomes. To grade each outcome, we need to click
-on the drop-down list in order to choose the grade we want to provide.
-
-The other option we turned on for this assignment, which we haven't seen in practice
-yet, is the option to manually reopen an assignment in order to enable resubmission.
-This option is within the **Attempt settings** section.
-
-If we want to enable the student to resubmit their work again, we need to change
-the **Allow another attempt** option to **Yes** using the drop-down list.
-
-When grading all assignments, we need to ensure that we click on **Save changes**
-when we have added the grades and feedback.
-
-We have now looked at all the key options when grading assignments with the
-simple direct grading method, and we have also created assignments using the
-advanced grading methods that utilize the marking guide and rubric grading
-tools. Let's take a look at how to grade these assignments.
+* _Save changes_.
 
 ## Grading with a marking guides
 
-The biggest difference between the grading pages we have seen previously and
-using the marking guide is the way in which we grade the assignment.
+The difference is that previous grading pages is the way in which the assignment is graded.
 
-- When grading with a scale, appears a drop-down list in order to add the grade. For a numerical grade, we there is a textbox to type the grade.
-- For a marking guide assignment, there is no single grade entry point. We have to provide the grade criteriato Moodle for the assignment.
-- Select the criteria titled _Planning_. The _Grade_ is explained as follows:
+- When grading with a scale, th add the grade appears a drop-down
+- For a numerical grade, we there is a textbox to type the grade.
+- For a marking guide assignment, there is no single grade entry point. 
+- Select the criteria titled _Planning_:
   - We can see the full details of the criteria that aids us by providing us with
     the correct grade.
   - We have a textbox where we can add feedback in relation to this criteria. 
   - When add _Frequently used comments_.
-
 - The final column provides a grade entry box. We can see the maximum number of points that
   are available for this criteria. We have to add a number grade up to the given maximum grade.
 - Click _Save changes_.
@@ -228,11 +202,10 @@ Following the grading, each score assigned to each piece of criteria is added to
 
 The rubric table enables us to easily grade work even though there is a lot of information on the screen:
 
-- When grading assignments, the teacher reviews the work and clicks on the box that contains the statement and points that they want to award. 
-- You can also add written feedback in the textbox on each row.
-- The shaded boxes show you the grade awarded for each criterion, and some comments
-  have been added to the feedback column as well.
-- The final grade for is calculated by Moodle by adding together each of the points awarded within the rubric, and this is shown in the assignment grading table within the _Grade_ column.
+- Teacher reviews the work and clicks on the box containing the statement and points to award. 
+- Written feedback in the textbox can be added.
+- The shaded boxes show the grade awarded for each criterion and comments.
+- Final grade is calculated adding together each of the points awarded within the rubric.
 - As with the _marking guide_, the student will see the full rubric table and comments when they receive their assignment feedback.
 
 ## Grading a graded item in the Gradebook
@@ -265,15 +238,16 @@ There are a few things to consider when using quick grading:
 - The marking guide and rubric-graded assignments cannot be marked
   via the quick grading option.
 
-When using the quick grading option, we can choose to add quick feedback, but this
-option is not shown on the current screen. However, we can change some settings to
-enable this:
+When using the quick grading option,you can choose to add quick feedback to
+enable this follow these steps:
 
-1. Click on the **My preferences** tab, or click on **Grader report** under the
-   **My preferences** heading.
-2. Scroll to the **General** section at the bottom of the page.
-3. Next to the **Show quick feedback** text, change the drop-down list to **Yes**.
-4. Click on the **Save changes** button at the bottom of the page.
+| Step | Action                                                       |
+| ---- | ------------------------------------------------------------ |
+| 1.   | Click on the _My preferences_, or on _Grader report_ under _My preferences_. |
+| 2.   | Scroll to _General_ section at the bottom of the page.       |
+| 3.   | In _Show quick feedback_, change the drop-down list to _Yes_. |
+| 4.   | _Save changes_.                                              |
 
 The quick feedback option is limited to adding text, so if a lot of text is required,
 it is recommended that the individual grading screen be used.
+
