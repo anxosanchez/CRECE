@@ -550,3 +550,4 @@ can be added. This will not be used in Gradebook calculations.
    course screen.
 
 *Adding Graded Activities*
+

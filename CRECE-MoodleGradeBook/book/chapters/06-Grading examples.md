@@ -164,10 +164,6 @@ back to the original grade awarded. However, in practice, Moodle always normaliz
 this aggregation type.) However, the calculation of the mean aggregation is different
 in this method.
 
-```
-Chapter 5
-```
-
 Instead of dividing the normalized total by the number of grades in the course
 (in our example, this meant dividing the total by three), the simple weighted mean
 aggregation divides the normalized total by the total maximum grade possible
